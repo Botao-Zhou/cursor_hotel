@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from 'react'
 import HotelCard from './HotelCard'
 import HotelCardPlaceholder, { HOTEL_CARD_PLACEHOLDER_HEIGHT } from './HotelCardPlaceholder'
-import type { Hotel } from '@/api/hotels'
+import type { Hotel } from '@/types/hotel'
 
 /**
  * 长列表渲染优化（应对大作业「对于长列表是否有渲染优化处理」评分项）：

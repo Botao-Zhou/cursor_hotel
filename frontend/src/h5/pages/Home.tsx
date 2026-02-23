@@ -11,6 +11,7 @@ import {
   Calendar,
   Toast,
 } from 'react-vant'
+import { formatDate, nights } from '@/utils/date'
 import '@/styles/h5-home.css'
 
 const IconLocation = () => <span className="h5-home-cell-icon" aria-hidden>📍</span>
@@ -35,23 +36,6 @@ const QUICK_TAGS = [
 ]
 
 const BANNER_PLACEHOLDER = 'https://via.placeholder.com/750x280/1989fa/fff?text=易宿酒店'
-
-function formatDate(d: Date): string {
-  const y = d.getFullYear()
-  const m = String(d.getMonth() + 1).padStart(2, '0')
-  const day = String(d.getDate()).padStart(2, '0')
-  return `${y}-${m}-${day}`
-}
-
-function dateFromStr(s: string): Date {
-  const [y, m, d] = s.split('-').map(Number)
-  return new Date(y, m - 1, d)
-}
-
-function nights(start: Date, end: Date): number {
-  const ms = end.getTime() - start.getTime()
-  return Math.max(0, Math.ceil(ms / (24 * 60 * 60 * 1000)))
-}
 
 export default function Home() {
   const navigate = useNavigate()

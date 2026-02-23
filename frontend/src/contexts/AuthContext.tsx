@@ -6,17 +6,12 @@ import {
   useState,
   type ReactNode,
 } from 'react'
+import type { User, UserRole } from '@/types/user'
 
 const STORAGE_TOKEN = 'pc_token'
 const STORAGE_USER = 'pc_user'
 
-export type UserRole = 'merchant' | 'admin'
-
-export interface User {
-  id: string
-  username: string
-  role: UserRole
-}
+export type { User, UserRole }
 
 interface AuthState {
   token: string | null

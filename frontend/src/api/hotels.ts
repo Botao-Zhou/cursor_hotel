@@ -1,42 +1,13 @@
 import { api } from './client'
+import type {
+  Hotel,
+  RoomType,
+  HotelListParams,
+  HotelListRes,
+  HotelFormValues,
+} from '@/types/hotel'
 
-export interface RoomType {
-  id?: string
-  name: string
-  price: number
-}
-
-export interface Hotel {
-  id: string
-  merchantId: string
-  nameZh: string
-  nameEn: string
-  address: string
-  starLevel: number
-  roomTypes: RoomType[]
-  openTime: string
-  status: string
-  rejectReason?: string | null
-  nearby?: string
-  images?: string[]
-  createdAt: string
-  updatedAt: string
-}
-
-export interface HotelListParams {
-  manage?: 1
-  keyword?: string
-  starLevel?: number | string
-  page?: number
-  pageSize?: number
-}
-
-export interface HotelListRes {
-  list: Hotel[]
-  total: number
-  page: number
-  pageSize: number
-}
+export type { Hotel, RoomType, HotelListParams, HotelListRes, HotelFormValues }
 
 export function fetchHotelList(params: HotelListParams = {}) {
   const q = new URLSearchParams()
@@ -51,16 +22,6 @@ export function fetchHotelList(params: HotelListParams = {}) {
 
 export function fetchHotelDetail(id: string) {
   return api.get<Hotel>(`/hotels/${id}`)
-}
-
-export interface HotelFormValues {
-  nameZh: string
-  nameEn: string
-  address: string
-  starLevel: number
-  roomTypes: { name: string; price: number }[]
-  openTime: string
-  nearby?: string
 }
 
 export function createHotel(body: HotelFormValues) {

@@ -5,7 +5,6 @@ import {
   PullRefresh,
   List,
   DropdownMenu,
-  DropdownMenuItem,
   Empty,
   Toast,
 } from 'react-vant'
@@ -149,8 +148,8 @@ export default function H5List() {
         onChange={setDropdownValue}
         className="h5-list-dropdown"
       >
-        <DropdownMenuItem name="star" title="星级" options={STAR_OPTIONS} />
-        <DropdownMenuItem name="price" title="价格" options={PRICE_OPTIONS} />
+        <DropdownMenu.Item name="star" title="星级" options={STAR_OPTIONS} />
+        <DropdownMenu.Item name="price" title="价格" options={PRICE_OPTIONS} />
       </DropdownMenu>
 
       {/* 下拉刷新 + 上滑加载（Vant PullRefresh + List） */}

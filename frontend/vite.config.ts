@@ -11,6 +11,12 @@ export default defineConfig({
   },
   server: {
     port: 5174,
+    // 若仍出现 WebSocket 400，可改为 hmr: false 关闭热更新（仅整页刷新）
+    hmr: {
+      protocol: 'ws',
+      host: 'localhost',
+      port: 5174,
+    },
     proxy: {
       '/api': {
         target: 'http://localhost:3000',

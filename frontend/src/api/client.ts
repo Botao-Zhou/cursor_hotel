@@ -1,9 +1,11 @@
 /**
  * 请求封装：统一 baseURL、JSON、标准响应 { code, message, data }
  */
+import type { ApiRes } from '@/types/api'
+
 const BASE = '/api'
 
-export type ApiRes<T = unknown> = { code: number; message: string; data: T }
+export type { ApiRes }
 
 async function request<T = unknown>(
   url: string,

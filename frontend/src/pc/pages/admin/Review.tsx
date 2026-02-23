@@ -14,23 +14,15 @@ import {
 import { SearchOutlined, AuditOutlined, StopOutlined, CheckCircleOutlined } from '@ant-design/icons'
 import { fetchAdminHotelList, offlineHotel, restoreHotel } from '@/api/admin'
 import type { Hotel } from '@/api/hotels'
+import { HOTEL_STATUS, HOTEL_STATUS_OPTIONS, getHotelStatusConfig } from '@/constants/hotelStatus'
+import { formatPriceFromHotel } from '@/utils/price'
 import ReviewAuditModal from './ReviewAuditModal'
 import '@/styles/pc-admin-review.css'
 
 const STATUS_OPTIONS = [
   { value: '', label: '全部状态' },
-  { value: 'pending', label: '审核中' },
-  { value: 'approved', label: '已通过' },
-  { value: 'rejected', label: '未通过' },
-  { value: 'offline', label: '已下线' },
+  ...HOTEL_STATUS_OPTIONS.map((o) => ({ value: o.value, label: o.label })),
 ]
-
-const STATUS_MAP: Record<string, { text: string; color: string }> = {
-  pending: { text: '审核中', color: 'orange' },
-  approved: { text: '已通过', color: 'green' },
-  rejected: { text: '未通过', color: 'red' },
-  offline: { text: '已下线', color: 'default' },
-}
 
 export default function AdminReview() {
   const [form] = Form.useForm()
@@ -103,13 +95,6 @@ export default function AdminReview() {
     }
   }
 
-  const getMinPrice = (hotel: Hotel) => {
-    const rooms = hotel.roomTypes || []
-    if (rooms.length === 0) return '-'
-    const min = Math.min(...rooms.map((r) => r.price || 0))
-    return min > 0 ? `¥${min}` : '-'
-  }
-
   const columns = [
     {
       title: '酒店名称',
@@ -143,7 +128,7 @@ export default function AdminReview() {
       title: '底价',
       key: 'minPrice',
       width: 88,
-      render: (_: unknown, record: Hotel) => getMinPrice(record),
+      render: (_: unknown, record: Hotel) => formatPriceFromHotel(record),
     },
     {
       title: '开业时间',
@@ -157,11 +142,11 @@ export default function AdminReview() {
       key: 'status',
       width: 96,
       render: (status: string, record: Hotel) => {
-        const cfg = STATUS_MAP[status] || { text: status, color: 'default' }
+        const cfg = getHotelStatusConfig(status)
         return (
           <Tag color={cfg.color}>
             {cfg.text}
-            {record.rejectReason && status === 'rejected' && (
+            {record.rejectReason && status === HOTEL_STATUS.REJECTED && (
               <span title={record.rejectReason}>（有原因）</span>
             )}
           </Tag>
@@ -175,7 +160,7 @@ export default function AdminReview() {
       fixed: 'right' as const,
       render: (_: unknown, record: Hotel) => (
         <Space wrap>
-          {(record.status === 'pending' || record.status === 'rejected') && (
+          {(record.status === HOTEL_STATUS.PENDING || record.status === HOTEL_STATUS.REJECTED) && (
             <Button
               type="link"
               size="small"
@@ -185,7 +170,7 @@ export default function AdminReview() {
               审核
             </Button>
           )}
-          {record.status === 'approved' && (
+          {record.status === HOTEL_STATUS.APPROVED && (
             <Popconfirm
               title="确定下线该酒店？"
               description="下线后用户端将不可见，可随时恢复上线。"
@@ -198,7 +183,7 @@ export default function AdminReview() {
               </Button>
             </Popconfirm>
           )}
-          {record.status === 'offline' && (
+          {record.status === HOTEL_STATUS.OFFLINE && (
             <Button
               type="link"
               size="small"

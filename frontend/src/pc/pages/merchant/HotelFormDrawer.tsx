@@ -1,12 +1,8 @@
 import { useEffect } from 'react'
 import { Drawer, Form, Input, InputNumber, Select, Button, Space, message } from 'antd'
 import { PlusOutlined, MinusCircleOutlined } from '@ant-design/icons'
-import type { Hotel } from '@/api/hotels'
-import {
-  type HotelFormValues,
-  createHotel,
-  updateHotel,
-} from '@/api/hotels'
+import type { Hotel, HotelFormValues } from '@/types/hotel'
+import { createHotel, updateHotel } from '@/api/hotels'
 
 const STAR_OPTIONS = [
   { value: 1, label: '一星' },

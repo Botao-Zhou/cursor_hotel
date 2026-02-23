@@ -2,18 +2,16 @@ import { useEffect, useMemo, useState } from 'react'
 import { useParams, useNavigate, useSearchParams } from 'react-router-dom'
 import {
   NavBar,
-  Swipe,
-  SwipeItem,
+  Swiper,
   Tag,
   Skeleton,
   Empty,
   ActionBar,
-  ActionBarIcon,
-  ActionBarButton,
   Calendar,
   Toast,
 } from 'react-vant'
 import { fetchHotelDetail, type Hotel } from '@/api/hotels'
+import { formatDate, dateFromStr, nights } from '@/utils/date'
 import '@/styles/h5-detail.css'
 
 const BANNER_PLACEHOLDERS = [
@@ -21,25 +19,6 @@ const BANNER_PLACEHOLDERS = [
   'https://via.placeholder.com/800x400/ff7d00/ffffff?text=Hotel+Photo+2',
   'https://via.placeholder.com/800x400/7232dd/ffffff?text=Hotel+Photo+3',
 ]
-
-function formatDate(d: Date): string {
-  const y = d.getFullYear()
-  const m = String(d.getMonth() + 1).padStart(2, '0')
-  const day = String(d.getDate()).padStart(2, '0')
-  return `${y}-${m}-${day}`
-}
-
-function dateFromStr(s: string): Date | null {
-  if (!s) return null
-  const [y, m, d] = s.split('-').map(Number)
-  if (!y || !m || !d) return null
-  return new Date(y, m - 1, d)
-}
-
-function nights(start: Date, end: Date): number {
-  const ms = end.getTime() - start.getTime()
-  return Math.max(0, Math.ceil(ms / (24 * 60 * 60 * 1000)))
-}
 
 export default function Detail() {
   const { id } = useParams<{ id: string }>()
@@ -138,13 +117,13 @@ export default function Detail() {
         <>
           {/* 大图 Banner：轮播 */}
           <div className="h5-detail-banner">
-            <Swipe autoplay={3000} indicatorColor="white">
+            <Swiper autoplay={3000} indicatorColor="white">
               {images.map((src, idx) => (
-                <SwipeItem key={idx}>
+                <Swiper.Item key={idx}>
                   <img src={src} alt="hotel" className="h5-detail-banner-img" />
-                </SwipeItem>
+                </Swiper.Item>
               ))}
-            </Swipe>
+            </Swiper>
           </div>
 
           {/* 基础信息卡片 */}
@@ -229,17 +208,17 @@ export default function Detail() {
 
       {/* 底部操作栏：客服/收藏 + 立即预订 */}
       <ActionBar safeAreaInsetBottom>
-        <ActionBarIcon
+        <ActionBar.Icon
           text="客服"
           icon="service-o"
           onClick={() => Toast.info('mock：联系客服')}
         />
-        <ActionBarIcon
+        <ActionBar.Icon
           text="收藏"
           icon="like-o"
           onClick={() => Toast.success('已收藏')}
         />
-        <ActionBarButton
+        <ActionBar.Button
           type="danger"
           text="立即预订"
           onClick={() => Toast.success('mock：预订流程待接入')}

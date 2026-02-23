@@ -12,6 +12,8 @@ import {
 } from 'antd'
 import { PlusOutlined, SearchOutlined, EditOutlined } from '@ant-design/icons'
 import { fetchHotelList, type Hotel } from '@/api/hotels'
+import { HOTEL_STATUS, getHotelStatusConfig } from '@/constants/hotelStatus'
+import { formatPriceFromHotel } from '@/utils/price'
 import HotelFormDrawer from './HotelFormDrawer'
 import '@/styles/pc-merchant-list.css'
 
@@ -23,13 +25,6 @@ const STAR_OPTIONS = [
   { value: 4, label: '四星' },
   { value: 5, label: '五星' },
 ]
-
-const STATUS_MAP: Record<string, { text: string; color: string }> = {
-  pending: { text: '审核中', color: 'orange' },
-  approved: { text: '已发布', color: 'green' },
-  rejected: { text: '未通过', color: 'red' },
-  offline: { text: '已下线', color: 'default' },
-}
 
 export default function MerchantList() {
   const [form] = Form.useForm()
@@ -91,13 +86,6 @@ export default function MerchantList() {
     setEditingHotel(null)
   }
 
-  const getMinPrice = (hotel: Hotel) => {
-    const rooms = hotel.roomTypes || []
-    if (rooms.length === 0) return '-'
-    const min = Math.min(...rooms.map((r) => r.price || 0))
-    return min > 0 ? `¥${min}` : '-'
-  }
-
   const columns = [
     {
       title: '酒店名称',
@@ -124,7 +112,7 @@ export default function MerchantList() {
       title: '底价',
       key: 'minPrice',
       width: 100,
-      render: (_: unknown, record: Hotel) => getMinPrice(record),
+      render: (_: unknown, record: Hotel) => formatPriceFromHotel(record),
     },
     {
       title: '开业时间',
@@ -138,11 +126,11 @@ export default function MerchantList() {
       key: 'status',
       width: 100,
       render: (status: string, record: Hotel) => {
-        const cfg = STATUS_MAP[status] || { text: status, color: 'default' }
+        const cfg = getHotelStatusConfig(status, true)
         return (
           <Tag color={cfg.color}>
             {cfg.text}
-            {record.rejectReason && status === 'rejected' && (
+            {record.rejectReason && status === HOTEL_STATUS.REJECTED && (
               <span title={record.rejectReason}>（有原因）</span>
             )}
           </Tag>

@@ -1,14 +1,9 @@
 import { useNavigate } from 'react-router-dom'
 import { Image, Tag } from 'react-vant'
-import type { Hotel } from '@/api/hotels'
+import type { Hotel } from '@/types/hotel'
+import { getMinPrice } from '@/utils/price'
 
 const COVER_PLACEHOLDER = 'https://via.placeholder.com/400x200/1989fa/fff?text=Hotel'
-
-function getMinPrice(hotel: Hotel): number {
-  const rooms = hotel.roomTypes || []
-  if (rooms.length === 0) return 0
-  return Math.min(...rooms.map((r) => r.price || 0))
-}
 
 /** 模拟评分（实际应由后端或点评数据提供），基于 id 保证同酒店稳定 */
 function mockScore(id: string): number {

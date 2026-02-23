@@ -1,19 +1,7 @@
 import { api } from './client'
-import type { Hotel } from './hotels'
+import type { Hotel, HotelListRes, AdminHotelListParams } from '@/types/hotel'
 
-export interface AdminHotelListParams {
-  status?: string
-  keyword?: string
-  page?: number
-  pageSize?: number
-}
-
-export interface HotelListRes {
-  list: Hotel[]
-  total: number
-  page: number
-  pageSize: number
-}
+export type { HotelListRes, AdminHotelListParams }
 
 export function fetchAdminHotelList(params: AdminHotelListParams = {}) {
   const q = new URLSearchParams()
