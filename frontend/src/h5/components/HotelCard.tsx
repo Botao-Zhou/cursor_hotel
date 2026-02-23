@@ -1,9 +1,11 @@
 import { useNavigate } from 'react-router-dom'
+import { useMemo, useState } from 'react'
 import { Image, Tag } from 'react-vant'
 import type { Hotel } from '@/types/hotel'
 import { getMinPrice } from '@/utils/price'
+import { createPlaceholderImage } from '@/utils/placeholderImage'
 
-const COVER_PLACEHOLDER = 'https://via.placeholder.com/400x200/1989fa/fff?text=Hotel'
+const COVER_PLACEHOLDER = createPlaceholderImage(400, 200, 'Hotel')
 
 /** 模拟评分（实际应由后端或点评数据提供），基于 id 保证同酒店稳定 */
 function mockScore(id: string): number {
@@ -15,7 +17,8 @@ function mockScore(id: string): number {
 /** 单条酒店卡片：封面图、名称、评分、地址、底价、快捷标签 */
 export default function HotelCard({ hotel }: { hotel: Hotel }) {
   const navigate = useNavigate()
-  const cover = hotel.images?.[0] || COVER_PLACEHOLDER
+  const initialCover = useMemo(() => hotel.images?.[0] || COVER_PLACEHOLDER, [hotel.images])
+  const [cover, setCover] = useState(initialCover)
   const price = getMinPrice(hotel)
   const score = mockScore(hotel.id)
   const tags = hotel.nearby ? hotel.nearby.split(/[,，、]/).slice(0, 3) : []
@@ -28,7 +31,15 @@ export default function HotelCard({ hotel }: { hotel: Hotel }) {
       tabIndex={0}
     >
       <div className="h5-hotel-card-cover">
-        <Image src={cover} alt="" fit="cover" width="100%" height={120} />
+        <Image
+          lazyload
+          src={cover}
+          alt=""
+          fit="cover"
+          width="100%"
+          height={120}
+          onError={() => setCover(COVER_PLACEHOLDER)}
+        />
       </div>
       <div className="h5-hotel-card-body">
         <div className="h5-hotel-card-title">{hotel.nameZh}</div>

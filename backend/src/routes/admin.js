@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import { success, fail } from '../utils/response.js'
-import { hotels, HOTEL_STATUS } from '../store/index.js'
+import { hotels, HOTEL_STATUS, persistStore } from '../store/index.js'
 import { requireAuth, requireAdmin } from '../middleware/auth.js'
 
 const router = Router()
@@ -49,6 +49,7 @@ router.post('/hotels/:id/approve', (req, res) => {
   hotel.status = HOTEL_STATUS.APPROVED
   hotel.rejectReason = null
   hotel.updatedAt = new Date().toISOString()
+  persistStore()
   return success(res, hotel, '已通过并发布')
 })
 
@@ -64,6 +65,7 @@ router.post('/hotels/:id/reject', (req, res) => {
   hotel.status = HOTEL_STATUS.REJECTED
   hotel.rejectReason = reason
   hotel.updatedAt = new Date().toISOString()
+  persistStore()
   return success(res, hotel, '已拒绝')
 })
 
@@ -77,6 +79,7 @@ router.post('/hotels/:id/offline', (req, res) => {
   if (!hotel) return fail(res, '酒店不存在', 404, 404)
   hotel.status = HOTEL_STATUS.OFFLINE
   hotel.updatedAt = new Date().toISOString()
+  persistStore()
   return success(res, hotel, '已下线')
 })
 
@@ -93,6 +96,7 @@ router.post('/hotels/:id/restore', (req, res) => {
   }
   hotel.status = HOTEL_STATUS.APPROVED
   hotel.updatedAt = new Date().toISOString()
+  persistStore()
   return success(res, hotel, '已恢复上线')
 })
 

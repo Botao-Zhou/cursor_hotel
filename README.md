@@ -22,7 +22,7 @@
 | | React Vant 3 | 移动端 H5 UI（日历、轮播、下拉刷新、列表加载等） |
 | **后端** | Node.js (≥18) | 运行环境 |
 | | Express 4 | HTTP 服务与路由 |
-| | 内存存储 | 当前为 JS 数组/Map 模拟 DB，便于扩展为持久化 |
+| | 本地 JSON 持久化 | 通过 `backend/src/db/data.json` 落盘，重启服务后数据保留 |
 
 ---
 
@@ -34,11 +34,11 @@
 |------|------|
 | 酒店查询页（首页）：Banner、地点/关键字/入住日期/星级/快捷标签、查询跳转列表 | ✅ |
 | 入住日期：Vant Calendar 区间选择，展示共几晚 | ✅ |
-| 酒店列表页：URL 参数解析、顶部筛选头、星级/价格 DropdownMenu | ✅ |
+| 酒店列表页：URL 参数解析、顶部筛选头、星级/价格筛选 | ✅ |
 | 酒店列表：卡片展示封面、名称、评分、地址、底价、快捷标签 | ✅ |
-| 下拉刷新 + 上滑自动加载（PullRefresh + List） | ✅ |
+| 列表分页加载（加载更多） | ✅ |
 | 长列表渲染优化（IntersectionObserver 视口内按需渲染） | ✅ |
-| 酒店详情页：NavBar、大图 Swipe 轮播、基础信息、日历+间夜、房型按价格排序 | ✅ |
+| 酒店详情页：顶部返回栏、大图 Swipe 轮播、基础信息、日历+间夜、房型按价格排序 | ✅ |
 | 详情页底部操作栏：客服/收藏、立即预订 | ✅ |
 
 ### PC 端（B 端商户 / 管理员）
@@ -117,15 +117,26 @@ cd ../backend && npm install
 | 命令 | 说明 |
 |------|------|
 | `npm run dev` | 同时启动前端与后端（需已安装根目录依赖） |
+| `npm run dev:3001` | 同时启动前端与后端，后端固定使用 3001 端口 |
 | `npm run dev:frontend` | 仅启动前端开发服务器 |
 | `npm run dev:backend` | 仅启动后端 API 服务 |
 
 - **前端**：默认运行在 **http://localhost:5174**（可在 `frontend/vite.config.ts` 中修改 `server.port`）。
 - **后端**：默认运行在 **http://localhost:3000**。
 
+### 环境变量（推荐）
+
+- 后端：复制 `backend/.env.example` 为 `backend/.env`，可配置 `PORT`、`PASSWORD_SALT`
+- 前端：复制 `frontend/.env.example` 为 `frontend/.env`，可配置 `VITE_DEV_PORT`
+- 前端代理会按以下优先级自动决定后端地址：
+  1. `VITE_API_TARGET`（完整 URL）
+  2. `VITE_BACKEND_PORT`
+  3. `../backend/.env` 中的 `PORT`
+  4. 默认 `http://localhost:3000`
+
 ### 代理规则
 
-前端开发环境下，Vite 会将 **以 `/api` 开头的请求** 代理到 **http://localhost:3000**，因此前端代码中请求 `/api/xxx` 即可访问后端，无需配置跨域。
+前端开发环境下，Vite 会将 **以 `/api` 开头的请求** 代理到后端服务地址（由环境变量自动解析），因此前端代码中请求 `/api/xxx` 即可访问后端，无需配置跨域。
 
 - 移动端入口：浏览器访问 **http://localhost:5174/h5**
 - PC 管理端入口：**http://localhost:5174/pc**（默认跳转登录页）
@@ -169,7 +180,8 @@ cursor_hotel/
     └── src/
         ├── index.js             # 入口，挂载路由与 CORS
         ├── utils/               # response 统一返回
-        ├── store/               # 内存 store：users、hotels、tokenStore
+        ├── store/               # 本地 JSON store：users、hotels、tokenStore
+        ├── db/                  # data.json（持久化数据文件）
         ├── middleware/          # 鉴权：requireAuth、requireAdmin、requireMerchant
         └── routes/              # auth、hotels、admin
 ```

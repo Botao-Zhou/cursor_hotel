@@ -4,6 +4,7 @@ import { LogoutOutlined } from '@ant-design/icons'
 import zhCN from 'antd/locale/zh_CN'
 import { PCAuthGuard } from '@/pc/components/PCAuthGuard'
 import { useAuth } from '@/contexts/AuthContext'
+import { logout as apiLogout } from '@/api/auth'
 import '@/styles/pc.css'
 
 export default function PCLayout() {
@@ -12,7 +13,12 @@ export default function PCLayout() {
   const { token, user, logout } = useAuth()
   const isLoginPage = location.pathname === '/pc/login'
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
+    try {
+      await apiLogout()
+    } catch {
+      // 即使服务端退出失败，也清理本地登录态，避免前端卡死在登录状态
+    }
     logout()
     navigate('/pc/login', { replace: true })
   }

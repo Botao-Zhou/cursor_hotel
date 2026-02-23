@@ -1,6 +1,7 @@
 import { Router } from 'express'
 import { success, fail } from '../utils/response.js'
-import { users, tokenStore, USER_ROLE, nextId } from '../store/index.js'
+import { users, tokenStore, USER_ROLE, nextId, persistStore } from '../store/index.js'
+import { hashPassword, verifyPassword, isPasswordHashed } from '../utils/password.js'
 
 const router = Router()
 
@@ -20,8 +21,9 @@ router.post('/register', (req, res) => {
     return fail(res, '用户名已存在')
   }
   const id = nextId('user')
-  const user = { id, username, password, role }
+  const user = { id, username, password: hashPassword(password), role }
   users.push(user)
+  persistStore()
   return success(res, {
     id: user.id,
     username: user.username,
@@ -39,9 +41,13 @@ router.post('/login', (req, res) => {
   if (!username || !password) {
     return fail(res, '缺少参数：username, password')
   }
-  const user = users.find((u) => u.username === username && u.password === password)
+  const user = users.find((u) => u.username === username && verifyPassword(password, u.password))
   if (!user) {
     return fail(res, '用户名或密码错误')
+  }
+  if (!isPasswordHashed(user.password)) {
+    user.password = hashPassword(password)
+    persistStore()
   }
   const token = `tk_${Date.now()}_${Math.random().toString(36).slice(2)}`
   tokenStore.set(token, { userId: user.id, role: user.role })

@@ -5,6 +5,7 @@ import {
   HOTEL_STATUS,
   nextId,
   tokenStore,
+  persistStore,
 } from '../store/index.js'
 import { requireAuth, requireMerchant } from '../middleware/auth.js'
 
@@ -16,7 +17,17 @@ const router = Router()
  * 商户/管理员可通过 query.manage=1 查看自己或全部（管理员）酒店
  */
 router.get('/', (req, res) => {
-  const { keyword, starLevel, page = 1, pageSize = 10, manage } = req.query
+  const {
+    keyword,
+    starLevel,
+    city,
+    tags,
+    minPrice,
+    maxPrice,
+    page = 1,
+    pageSize = 10,
+    manage,
+  } = req.query
   const auth = req.headers.authorization
   const token = auth && auth.startsWith('Bearer ') ? auth.slice(7) : null
   const session = token ? tokenStore.get(token) : null
@@ -41,8 +52,43 @@ router.get('/', (req, res) => {
     )
   }
   if (starLevel != null && starLevel !== '') {
-    const star = Number(starLevel)
-    if (!Number.isNaN(star)) list = list.filter((h) => h.starLevel === star)
+    const stars = String(starLevel)
+      .split(',')
+      .map((v) => Number(v))
+      .filter((v) => !Number.isNaN(v))
+    if (stars.length > 0) {
+      list = list.filter((h) => stars.includes(h.starLevel))
+    }
+  }
+
+  if (city && String(city).trim()) {
+    const c = String(city).trim().toLowerCase()
+    list = list.filter((h) => (h.address || '').toLowerCase().includes(c))
+  }
+
+  if (tags && String(tags).trim()) {
+    const tagList = String(tags)
+      .split(',')
+      .map((v) => v.trim().toLowerCase())
+      .filter(Boolean)
+    if (tagList.length > 0) {
+      list = list.filter((h) => {
+        const nearby = (h.nearby || '').toLowerCase()
+        return tagList.some((t) => nearby.includes(t))
+      })
+    }
+  }
+
+  if (minPrice !== undefined || maxPrice !== undefined) {
+    const min = minPrice !== undefined && minPrice !== '' ? Number(minPrice) : undefined
+    const max = maxPrice !== undefined && maxPrice !== '' ? Number(maxPrice) : undefined
+    list = list.filter((h) => {
+      const prices = (h.roomTypes || []).map((r) => Number(r.price) || 0)
+      const hotelMin = prices.length > 0 ? Math.min(...prices) : 0
+      if (min !== undefined && !Number.isNaN(min) && hotelMin < min) return false
+      if (max !== undefined && !Number.isNaN(max) && hotelMin > max) return false
+      return true
+    })
   }
 
   const total = list.length
@@ -116,6 +162,7 @@ router.post('/', requireAuth, requireMerchant, (req, res) => {
     updatedAt: now,
   }
   hotels.push(hotel)
+  persistStore()
   return success(res, hotel, '创建成功')
 })
 
@@ -153,6 +200,7 @@ router.put('/:id', requireAuth, requireMerchant, (req, res) => {
   }
   const idx = hotels.findIndex((h) => h.id === id)
   hotels[idx] = updated
+  persistStore()
   const roomSorted = [...updated.roomTypes].sort((a, b) => a.price - b.price)
   return success(res, { ...updated, roomTypes: roomSorted }, '更新成功')
 })

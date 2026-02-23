@@ -12,6 +12,7 @@
     "@ant-design/icons": "^5.5.0",
     "antd": "^5.22.0",
     "react": "^18.3.1",
+    "react-activation": "^0.13.4",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.28.0",
     "react-vant": "^3.3.5"

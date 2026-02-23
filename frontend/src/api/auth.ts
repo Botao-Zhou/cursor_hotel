@@ -23,3 +23,9 @@ export async function register(username: string, password: string, role: UserRol
   if (res.code !== 0) throw new Error(res.message || '注册失败')
   return res.data
 }
+
+export async function logout() {
+  const res = await api.post<null>('/auth/logout')
+  if (res.code !== 0) throw new Error(res.message || '退出失败')
+  return res.data
+}

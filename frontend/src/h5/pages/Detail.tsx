@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useParams, useNavigate, useSearchParams } from 'react-router-dom'
 import {
-  NavBar,
   Swiper,
   Tag,
   Skeleton,
@@ -12,12 +11,13 @@ import {
 } from 'react-vant'
 import { fetchHotelDetail, type Hotel } from '@/api/hotels'
 import { formatDate, dateFromStr, nights } from '@/utils/date'
+import { createPlaceholderImage } from '@/utils/placeholderImage'
 import '@/styles/h5-detail.css'
 
 const BANNER_PLACEHOLDERS = [
-  'https://via.placeholder.com/800x400/1989fa/ffffff?text=Hotel+Photo+1',
-  'https://via.placeholder.com/800x400/ff7d00/ffffff?text=Hotel+Photo+2',
-  'https://via.placeholder.com/800x400/7232dd/ffffff?text=Hotel+Photo+3',
+  createPlaceholderImage(800, 400, 'Hotel Photo 1', '#1989fa'),
+  createPlaceholderImage(800, 400, 'Hotel Photo 2', '#ff7d00'),
+  createPlaceholderImage(800, 400, 'Hotel Photo 3', '#7232dd'),
 ]
 
 export default function Detail() {
@@ -103,7 +103,12 @@ export default function Detail() {
 
   return (
     <div className="h5-detail-page">
-      <NavBar title={title} leftArrow onBack={() => navigate(-1)} />
+      <div style={{ background: '#fff', borderBottom: '1px solid #ebedf0', padding: '10px 12px', display: 'flex', alignItems: 'center', gap: 8 }}>
+        <button type="button" onClick={() => navigate(-1)} style={{ border: 'none', background: 'transparent', fontSize: 18, lineHeight: 1 }}>
+          ←
+        </button>
+        <div style={{ fontSize: 16, fontWeight: 600 }}>{title}</div>
+      </div>
 
       {loading ? (
         <div className="h5-detail-loading">
@@ -120,7 +125,14 @@ export default function Detail() {
             <Swiper autoplay={3000} indicatorColor="white">
               {images.map((src, idx) => (
                 <Swiper.Item key={idx}>
-                  <img src={src} alt="hotel" className="h5-detail-banner-img" />
+                  <img
+                    src={src}
+                    alt="hotel"
+                    className="h5-detail-banner-img"
+                    onError={(e) => {
+                      e.currentTarget.src = BANNER_PLACEHOLDERS[idx % BANNER_PLACEHOLDERS.length]
+                    }}
+                  />
                 </Swiper.Item>
               ))}
             </Swiper>

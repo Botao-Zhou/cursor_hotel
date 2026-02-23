@@ -29,6 +29,12 @@ export interface HotelListParams {
   manage?: 1
   keyword?: string
   starLevel?: number | string
+  city?: string
+  tags?: string
+  minPrice?: number
+  maxPrice?: number
+  checkIn?: string
+  checkOut?: string
   page?: number
   pageSize?: number
 }

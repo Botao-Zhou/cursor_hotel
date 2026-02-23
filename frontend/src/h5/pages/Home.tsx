@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useDebouncedValue } from '@/hooks/useDebouncedValue'
 import {
   Image,
   Cell,
@@ -12,6 +13,7 @@ import {
   Toast,
 } from 'react-vant'
 import { formatDate, nights } from '@/utils/date'
+import { createPlaceholderImage } from '@/utils/placeholderImage'
 import '@/styles/h5-home.css'
 
 const IconLocation = () => <span className="h5-home-cell-icon" aria-hidden>📍</span>
@@ -35,12 +37,13 @@ const QUICK_TAGS = [
   { key: '温泉', label: '温泉' },
 ]
 
-const BANNER_PLACEHOLDER = 'https://via.placeholder.com/750x280/1989fa/fff?text=易宿酒店'
+const BANNER_PLACEHOLDER = createPlaceholderImage(750, 280, 'Yisu Hotel')
 
 export default function Home() {
   const navigate = useNavigate()
-  const [city, setCity] = useState('上海')
+  const [city, setCity] = useState('杭州')
   const [keyword, setKeyword] = useState('')
+  const debouncedKeyword = useDebouncedValue(keyword, 500)
   const [calendarVisible, setCalendarVisible] = useState(false)
   const [dateRange, setDateRange] = useState<[Date, Date] | null>(null)
   const [starSheetVisible, setStarSheetVisible] = useState(false)
@@ -84,8 +87,9 @@ export default function Home() {
   const handleSearch = () => {
     const checkIn = dateRange?.[0] ? formatDate(dateRange[0]) : ''
     const checkOut = dateRange?.[1] ? formatDate(dateRange[1]) : ''
+    const kw = (debouncedKeyword ?? keyword).toString().trim()
     const params: Record<string, string> = {
-      keyword: keyword.trim(),
+      keyword: kw,
       city,
       checkIn,
       checkOut,
@@ -96,7 +100,7 @@ export default function Home() {
     Object.entries(params).forEach(([k, v]) => {
       if (v) query.set(k, v)
     })
-    navigate(`/h5/list?${query.toString()}`, { state: { keyword: keyword.trim(), city, checkIn, checkOut, stars: selectedStars, tags: quickSelected } })
+    navigate(`/h5/list?${query.toString()}`, { state: { keyword: kw, city, checkIn, checkOut, stars: selectedStars, tags: quickSelected } })
   }
 
   const handleBannerClick = () => {
@@ -146,7 +150,9 @@ export default function Home() {
             icon={<IconLocation />}
             onClick={() => {
               Toast.success('mock：可接入定位或城市选择')
-              setCity(city === '上海' ? '北京' : '上海')
+              const cities = ['杭州', '上海', '北京']
+              const nextIdx = (cities.indexOf(city) + 1) % cities.length
+              setCity(cities[nextIdx])
             }}
           />
           <Field

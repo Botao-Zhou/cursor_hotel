@@ -39,7 +39,7 @@ export function getHotelStatusConfig(
   isMerchant = false
 ): { text: string; color: string } {
   const option = HOTEL_STATUS_OPTIONS.find((o) => o.value === status)
-  const label = option?.label ?? status || '-'
+  const label = option?.label ?? (status || '-')
   const text = isMerchant && option && MERCHANT_LABEL_MAP[option.value] !== undefined
     ? MERCHANT_LABEL_MAP[option.value]
     : label

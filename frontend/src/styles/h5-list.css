@@ -49,6 +49,20 @@
   max-width: 100%;
 }
 
+.h5-list-keyword-wrap {
+  margin-top: 10px;
+}
+
+.h5-list-keyword-wrap .h5-list-keyword-field {
+  background: #f7f8fa;
+  border-radius: 8px;
+  padding: 0 12px;
+}
+
+.h5-list-keyword-wrap .rv-field__body {
+  font-size: 13px;
+}
+
 /* DropdownMenu 下方留出内容区 */
 .h5-list-dropdown {
   flex-shrink: 0;
