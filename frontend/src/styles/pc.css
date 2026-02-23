@@ -1,0 +1,24 @@
+.pc-layout {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pc-header {
+  height: 56px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  background: #001529;
+  color: #fff;
+}
+
+.pc-logo {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.pc-main {
+  flex: 1;
+  background: #f0f2f5;
+}

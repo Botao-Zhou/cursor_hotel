@@ -1,0 +1,24 @@
+.h5-layout {
+  min-height: 100%;
+  background: #f7f8fa;
+}
+
+.h5-main {
+  min-height: 100%;
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+.h5-welcome {
+  padding: 48px 24px 24px;
+  text-align: center;
+}
+
+.h5-welcome h1 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.h5-welcome p {
+  color: #969799;
+  margin-bottom: 24px;
+}

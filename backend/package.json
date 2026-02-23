@@ -1,0 +1,19 @@
+{
+  "name": "yisu-hotel-backend",
+  "version": "1.0.0",
+  "description": "易宿酒店预订平台 - 后端 API 服务",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
+    "build": "echo 'Node 项目无需 build'"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
