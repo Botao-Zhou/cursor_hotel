@@ -1,0 +1,37 @@
+.pc-admin-review {
+  padding: 24px;
+  min-height: 100%;
+}
+
+.pc-admin-review-card {
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.pc-admin-review-card .ant-card-body {
+  padding: 24px;
+}
+
+.pc-admin-review-search {
+  margin-bottom: 20px;
+}
+
+.pc-admin-review-search .ant-form-item {
+  margin-right: 16px;
+  margin-bottom: 12px;
+}
+
+.pc-admin-review-table .table-hotel-name {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.pc-admin-review-table .table-hotel-name-en {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.45);
+  margin-top: 2px;
+}
+
+.pc-admin-review-table .ant-table-pagination {
+  margin: 16px 0 0 0;
+}

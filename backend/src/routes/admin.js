@@ -9,13 +9,22 @@ router.use(requireAuth, requireAdmin)
 
 /**
  * GET /api/admin/hotels
- * 管理员：获取全部酒店（含审核中/拒绝/下线），用于审核列表
+ * 管理员：获取全部酒店（含审核中/拒绝/下线），支持 status、keyword 筛选
  */
 router.get('/hotels', (req, res) => {
-  const { status, page = 1, pageSize = 20 } = req.query
+  const { status, keyword, page = 1, pageSize = 20 } = req.query
   let list = [...hotels]
   if (status) {
     list = list.filter((h) => h.status === status)
+  }
+  if (keyword && String(keyword).trim()) {
+    const k = String(keyword).trim().toLowerCase()
+    list = list.filter(
+      (h) =>
+        (h.nameZh && h.nameZh.toLowerCase().includes(k)) ||
+        (h.nameEn && h.nameEn.toLowerCase().includes(k)) ||
+        (h.address && h.address.toLowerCase().includes(k))
+    )
   }
   const total = list.length
   const pageNum = Math.max(1, parseInt(page, 10) || 1)
