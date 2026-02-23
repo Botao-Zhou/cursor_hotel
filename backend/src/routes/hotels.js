@@ -110,6 +110,7 @@ router.post('/', requireAuth, requireMerchant, (req, res) => {
     openTime: openTime.trim(),
     status: HOTEL_STATUS.PENDING,
     rejectReason: null,
+    nearby: body.nearby != null ? String(body.nearby).trim() : '',
     images: Array.isArray(body.images) ? body.images : [],
     createdAt: now,
     updatedAt: now,
@@ -147,6 +148,7 @@ router.put('/:id', requireAuth, requireMerchant, (req, res) => {
       price: Math.max(0, Number(r.price) || 0),
     })),
     images: Array.isArray(body.images) ? body.images : hotel.images,
+    nearby: body.nearby !== undefined ? String(body.nearby).trim() : hotel.nearby,
     updatedAt: new Date().toISOString(),
   }
   const idx = hotels.findIndex((h) => h.id === id)
