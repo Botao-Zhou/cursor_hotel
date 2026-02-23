@@ -1,0 +1,76 @@
+.pc-login-wrap {
+  min-height: calc(100vh - 56px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(135deg, #1a1f36 0%, #252b42 50%, #1e3a5f 100%);
+}
+
+.pc-login-card {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.25);
+}
+
+.pc-login-card .ant-card-body {
+  padding: 32px 40px 40px;
+}
+
+.pc-login-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.pc-login-title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #1a1f36;
+  margin: 0 0 4px 0;
+  letter-spacing: 0.02em;
+}
+
+.pc-login-subtitle {
+  font-size: 14px;
+  color: #5a6070;
+  margin: 0;
+}
+
+.pc-login-tabs .ant-tabs-nav {
+  margin-bottom: 24px;
+}
+
+.pc-login-tabs .ant-tabs-tab {
+  padding: 8px 20px;
+  font-size: 15px;
+}
+
+.pc-login-form .ant-form-item {
+  margin-bottom: 20px;
+}
+
+.pc-form-icon {
+  color: #8c8c8c;
+  margin-right: 8px;
+}
+
+.pc-login-actions {
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.pc-login-btn {
+  height: 44px;
+  font-size: 15px;
+  border-radius: 8px;
+}
+
+.pc-login-card .ant-select-selector {
+  border-radius: 6px;
+}
+
+.pc-login-card .ant-input-affix-wrapper,
+.pc-login-card .ant-input {
+  border-radius: 8px;
+}

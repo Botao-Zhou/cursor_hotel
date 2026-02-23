@@ -9,6 +9,7 @@
   padding: 0 24px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background: #001529;
   color: #fff;
 }
@@ -16,6 +17,25 @@
 .pc-logo {
   font-size: 18px;
   font-weight: 600;
+}
+
+.pc-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pc-header-user {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.pc-header-logout {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.pc-header-logout:hover {
+  color: #fff;
 }
 
 .pc-main {
