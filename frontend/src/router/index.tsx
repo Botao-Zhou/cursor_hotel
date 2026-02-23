@@ -1,7 +1,9 @@
 import { Navigate, RouteObject } from 'react-router-dom'
 import PCLayout from '@/layouts/PCLayout'
 import H5Layout from '@/layouts/H5Layout'
-import H5Welcome from '@/h5/pages/Welcome'
+import Home from '@/h5/pages/Home'
+import H5List from '@/h5/pages/List'
+import H5Detail from '@/h5/pages/Detail'
 import LoginRegister from '@/pc/pages/LoginRegister'
 import MerchantList from '@/pc/pages/merchant/List'
 import AdminReview from '@/pc/pages/admin/Review'
@@ -22,8 +24,9 @@ export const routes: RouteObject[] = [
     path: '/h5',
     element: <H5Layout />,
     children: [
-      { index: true, element: <H5Welcome /> },
-      // 后续在此添加：酒店列表、酒店详情等
+      { index: true, element: <Home /> },
+      { path: 'list', element: <H5List /> },
+      { path: 'detail/:id', element: <H5Detail /> },
     ],
   },
   { path: '*', element: <Navigate to="/h5" replace /> },
