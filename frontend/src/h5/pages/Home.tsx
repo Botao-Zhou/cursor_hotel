@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useDebouncedValue } from '@/hooks/useDebouncedValue'
 import {
+  ActionSheet,
   Image,
   Cell,
   CellGroup,
@@ -35,9 +36,37 @@ const QUICK_TAGS = [
   { key: '含早', label: '含早' },
   { key: '近地铁', label: '近地铁' },
   { key: '温泉', label: '温泉' },
+  { key: '海景', label: '海景' },
+  { key: '泳池', label: '泳池' },
+  { key: '健身房', label: '健身房' },
+  { key: '网红', label: '网红' },
+  { key: '设计师', label: '设计师' },
+  { key: '宠物友好', label: '宠物友好' },
+  { key: '商务', label: '商务' },
+  { key: '度假', label: '度假' },
+  { key: '无烟', label: '无烟' },
 ]
 
 const BANNER_PLACEHOLDER = createPlaceholderImage(750, 280, 'Yisu Hotel')
+
+const CITIES = [
+  '杭州',
+  '上海',
+  '北京',
+  '深圳',
+  '广州',
+  '成都',
+  '西安',
+  '南京',
+  '苏州',
+  '厦门',
+  '三亚',
+  '青岛',
+  '重庆',
+  '武汉',
+  '长沙',
+  '天津',
+]
 
 export default function Home() {
   const navigate = useNavigate()
@@ -49,6 +78,11 @@ export default function Home() {
   const [starSheetVisible, setStarSheetVisible] = useState(false)
   const [selectedStars, setSelectedStars] = useState<number[]>([])
   const [quickSelected, setQuickSelected] = useState<string[]>([])
+  const [citySheetVisible, setCitySheetVisible] = useState(false)
+
+  const cityActions = useMemo(() => {
+    return CITIES.map((c) => ({ name: c, color: c === city ? '#ee0a24' : undefined }))
+  }, [city])
 
   const dateRangeText = useMemo(() => {
     if (!dateRange || !dateRange[0] || !dateRange[1]) return '请选择入住与离店日期'
@@ -148,12 +182,7 @@ export default function Home() {
             value={city}
             isLink
             icon={<IconLocation />}
-            onClick={() => {
-              Toast.success('mock：可接入定位或城市选择')
-              const cities = ['杭州', '上海', '北京']
-              const nextIdx = (cities.indexOf(city) + 1) % cities.length
-              setCity(cities[nextIdx])
-            }}
+            onClick={() => setCitySheetVisible(true)}
           />
           <Field
             value={keyword}
@@ -251,6 +280,18 @@ export default function Home() {
           </Button>
         </div>
       </Popup>
+
+      <ActionSheet
+        visible={citySheetVisible}
+        actions={cityActions}
+        cancelText="取消"
+        onSelect={(action) => {
+          setCity(action.name)
+          setCitySheetVisible(false)
+          Toast.success(`已选择：${action.name}`)
+        }}
+        onCancel={() => setCitySheetVisible(false)}
+      />
     </div>
   )
 }
