@@ -1,0 +1,177 @@
+.h5-detail-page {
+  min-height: 100vh;
+  background: #f7f8fa;
+  padding-bottom: env(safe-area-inset-bottom, 56px);
+}
+
+.h5-detail-loading,
+.h5-detail-empty {
+  padding: 16px;
+}
+
+/* Banner */
+.h5-detail-banner {
+  background: #000;
+}
+
+.h5-detail-banner-img {
+  display: block;
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+/* Sections */
+.h5-detail-section {
+  background: #fff;
+  margin: 8px 0;
+  padding: 12px 16px;
+}
+
+.h5-detail-info {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.h5-detail-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #323233;
+  margin: 0 0 4px;
+}
+
+.h5-detail-title-en {
+  font-size: 12px;
+  color: #969799;
+  margin-bottom: 6px;
+}
+
+.h5-detail-meta {
+  font-size: 12px;
+  color: #969799;
+  margin-bottom: 4px;
+}
+
+.h5-detail-star {
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #fff7cc;
+  color: #ad6800;
+}
+
+.h5-detail-addr {
+  font-size: 13px;
+  color: #646566;
+  margin-bottom: 6px;
+}
+
+.h5-detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.h5-detail-tag {
+  flex-shrink: 0;
+}
+
+/* Date banner */
+.h5-detail-date {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.h5-detail-date-title {
+  font-size: 13px;
+  color: #646566;
+}
+
+.h5-detail-date-text {
+  font-size: 14px;
+  color: #323233;
+}
+
+/* Rooms */
+.h5-detail-rooms {
+  padding-bottom: 8px;
+}
+
+.h5-detail-subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #323233;
+  margin: 0 0 8px;
+}
+
+.h5-detail-no-rooms {
+  font-size: 13px;
+  color: #969799;
+}
+
+.h5-detail-room-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.h5-detail-room-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 0;
+  border-top: 1px solid #f2f3f5;
+}
+
+.h5-detail-room-item:first-child {
+  border-top: none;
+}
+
+.h5-detail-room-main {
+  flex: 1;
+  min-width: 0;
+  padding-right: 8px;
+}
+
+.h5-detail-room-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #323233;
+  margin-bottom: 4px;
+}
+
+.h5-detail-room-bed {
+  font-size: 12px;
+  color: #969799;
+}
+
+.h5-detail-room-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.h5-detail-room-price-num {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ee0a24;
+}
+
+.h5-detail-room-price-unit {
+  font-size: 12px;
+  color: #969799;
+  margin-left: 2px;
+}
+
+.h5-detail-room-book {
+  border: none;
+  background: linear-gradient(135deg, #ff6034, #ee0a24);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
