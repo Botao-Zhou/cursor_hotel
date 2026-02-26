@@ -30,6 +30,14 @@ export function fetchHotelDetail(id: string) {
   return api.get<Hotel>(`/hotels/${id}`)
 }
 
+export function fetchHotelDetailWithDate(id: string, checkIn?: string, checkOut?: string) {
+  const q = new URLSearchParams()
+  if (checkIn) q.set('checkIn', checkIn)
+  if (checkOut) q.set('checkOut', checkOut)
+  const query = q.toString()
+  return api.get<Hotel>(`/hotels/${id}${query ? `?${query}` : ''}`)
+}
+
 export function createHotel(body: HotelFormValues) {
   return api.post<Hotel>('/hotels', {
     nameZh: body.nameZh,

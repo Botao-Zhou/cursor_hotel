@@ -1,0 +1,5202 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "username": "merchant1",
+      "password": "1ff29b872b4a5b09297760a96fdd19cede248277aeec2df2966679be66ad5830ebc750aa611545d8087af1107e134b602c8519887e69d347043ebc175c5af246",
+      "role": "merchant"
+    },
+    {
+      "id": "u2",
+      "username": "admin1",
+      "password": "1ff29b872b4a5b09297760a96fdd19cede248277aeec2df2966679be66ad5830ebc750aa611545d8087af1107e134b602c8519887e69d347043ebc175c5af246",
+      "role": "admin"
+    }
+  ],
+  "hotels": [
+    {
+      "id": "h1",
+      "merchantId": "u1",
+      "nameZh": "易宿·杭州精选酒店 01号",
+      "nameEn": "Yisu 杭州 Select Hotel #01",
+      "address": "浙江省杭州市中心区示例路 101 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h1_1",
+          "name": "标准大床",
+          "price": 419
+        },
+        {
+          "id": "r_h1_2",
+          "name": "高级双床",
+          "price": 559
+        }
+      ],
+      "openTime": "2016-02-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "杭州、网红、免费停车",
+      "images": [],
+      "createdAt": "2024-01-03T10:00:00.000Z",
+      "updatedAt": "2024-01-03T10:00:00.000Z"
+    },
+    {
+      "id": "h2",
+      "merchantId": "u1",
+      "nameZh": "易宿·杭州商务酒店 02号",
+      "nameEn": "Yisu 杭州 Business Hotel #02",
+      "address": "浙江省杭州市中心区示例路 102 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h2_1",
+          "name": "标准大床",
+          "price": 579
+        },
+        {
+          "id": "r_h2_2",
+          "name": "高级双床",
+          "price": 779
+        }
+      ],
+      "openTime": "2017-03-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "杭州、商务、免费停车、含早",
+      "images": [],
+      "createdAt": "2024-01-04T10:00:00.000Z",
+      "updatedAt": "2024-01-04T10:00:00.000Z"
+    },
+    {
+      "id": "h3",
+      "merchantId": "u1",
+      "nameZh": "易宿·杭州度假酒店 03号",
+      "nameEn": "Yisu 杭州 Resort Hotel #03",
+      "address": "浙江省杭州市中心区示例路 103 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h3_1",
+          "name": "标准大床",
+          "price": 719
+        },
+        {
+          "id": "r_h3_2",
+          "name": "高级双床",
+          "price": 979
+        }
+      ],
+      "openTime": "2018-04-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "杭州、度假、含早、温泉",
+      "images": [],
+      "createdAt": "2024-01-05T10:00:00.000Z",
+      "updatedAt": "2024-01-05T10:00:00.000Z"
+    },
+    {
+      "id": "h4",
+      "merchantId": "u1",
+      "nameZh": "易宿·杭州设计师酒店 04号",
+      "nameEn": "Yisu 杭州 Designer Hotel #04",
+      "address": "浙江省杭州市中心区示例路 104 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h4_1",
+          "name": "标准大床",
+          "price": 1019
+        },
+        {
+          "id": "r_h4_2",
+          "name": "高级双床",
+          "price": 1099
+        }
+      ],
+      "openTime": "2019-05-05",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "杭州、设计师、免费停车、近地铁、海景",
+      "images": [],
+      "createdAt": "2024-01-06T10:00:00.000Z",
+      "updatedAt": "2024-01-06T10:00:00.000Z"
+    },
+    {
+      "id": "h5",
+      "merchantId": "u1",
+      "nameZh": "易宿·杭州亲子酒店 05号",
+      "nameEn": "Yisu 杭州 Family Hotel #05",
+      "address": "浙江省杭州市中心区示例路 105 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h5_1",
+          "name": "标准大床",
+          "price": 1839
+        },
+        {
+          "id": "r_h5_2",
+          "name": "高级双床",
+          "price": 1979
+        }
+      ],
+      "openTime": "2020-06-06",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "杭州、亲子、泳池",
+      "images": [],
+      "createdAt": "2024-01-07T10:00:00.000Z",
+      "updatedAt": "2024-01-07T10:00:00.000Z"
+    },
+    {
+      "id": "h6",
+      "merchantId": "u1",
+      "nameZh": "易宿·杭州快捷酒店 06号",
+      "nameEn": "Yisu 杭州 Budget Hotel #06",
+      "address": "浙江省杭州市中心区示例路 106 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h6_1",
+          "name": "标准大床",
+          "price": 99
+        },
+        {
+          "id": "r_h6_2",
+          "name": "高级双床",
+          "price": 299
+        }
+      ],
+      "openTime": "2021-07-07",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "杭州、近地铁、免费停车、含早、豪华、健身房",
+      "images": [],
+      "createdAt": "2024-01-08T10:00:00.000Z",
+      "updatedAt": "2024-01-08T10:00:00.000Z"
+    },
+    {
+      "id": "h7",
+      "merchantId": "u1",
+      "nameZh": "易宿·杭州精选酒店 07号",
+      "nameEn": "Yisu 杭州 Select Hotel #07",
+      "address": "浙江省杭州市中心区示例路 107 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h7_1",
+          "name": "标准大床",
+          "price": 349
+        },
+        {
+          "id": "r_h7_2",
+          "name": "高级双床",
+          "price": 609
+        }
+      ],
+      "openTime": "2022-08-01",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "杭州、网红、温泉、宠物友好",
+      "images": [],
+      "createdAt": "2024-01-09T10:00:00.000Z",
+      "updatedAt": "2024-01-09T10:00:00.000Z"
+    },
+    {
+      "id": "h8",
+      "merchantId": "u1",
+      "nameZh": "易宿·杭州商务酒店 08号",
+      "nameEn": "Yisu 杭州 Business Hotel #08",
+      "address": "浙江省杭州市中心区示例路 108 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h8_1",
+          "name": "标准大床",
+          "price": 469
+        },
+        {
+          "id": "r_h8_2",
+          "name": "高级双床",
+          "price": 549
+        }
+      ],
+      "openTime": "2023-09-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "杭州、商务、免费停车、近地铁、海景、无烟",
+      "images": [],
+      "createdAt": "2024-01-10T10:00:00.000Z",
+      "updatedAt": "2024-01-10T10:00:00.000Z"
+    },
+    {
+      "id": "h9",
+      "merchantId": "u1",
+      "nameZh": "易宿·杭州度假酒店 09号",
+      "nameEn": "Yisu 杭州 Resort Hotel #09",
+      "address": "浙江省杭州市中心区示例路 109 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h9_1",
+          "name": "标准大床",
+          "price": 619
+        },
+        {
+          "id": "r_h9_2",
+          "name": "高级双床",
+          "price": 759
+        }
+      ],
+      "openTime": "2024-01-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "杭州、度假、含早、泳池、豪华",
+      "images": [],
+      "createdAt": "2024-01-11T10:00:00.000Z",
+      "updatedAt": "2024-01-11T10:00:00.000Z"
+    },
+    {
+      "id": "h10",
+      "merchantId": "u1",
+      "nameZh": "易宿·杭州设计师酒店 10号",
+      "nameEn": "Yisu 杭州 Designer Hotel #10",
+      "address": "浙江省杭州市中心区示例路 110 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h10_1",
+          "name": "标准大床",
+          "price": 819
+        },
+        {
+          "id": "r_h10_2",
+          "name": "高级双床",
+          "price": 1019
+        }
+      ],
+      "openTime": "2015-02-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "杭州、设计师、免费停车、亲子、健身房",
+      "images": [],
+      "createdAt": "2024-01-12T10:00:00.000Z",
+      "updatedAt": "2024-01-12T10:00:00.000Z"
+    },
+    {
+      "id": "h11",
+      "merchantId": "u1",
+      "nameZh": "易宿·杭州亲子酒店 11号",
+      "nameEn": "Yisu 杭州 Family Hotel #11",
+      "address": "浙江省杭州市中心区示例路 111 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h11_1",
+          "name": "标准大床",
+          "price": 1239
+        },
+        {
+          "id": "r_h11_2",
+          "name": "高级双床",
+          "price": 1499
+        }
+      ],
+      "openTime": "2016-03-05",
+      "status": "pending",
+      "rejectReason": null,
+      "nearby": "杭州、亲子、宠物友好、含早",
+      "images": [],
+      "createdAt": "2024-01-13T10:00:00.000Z",
+      "updatedAt": "2024-01-13T10:00:00.000Z"
+    },
+    {
+      "id": "h12",
+      "merchantId": "u1",
+      "nameZh": "易宿·杭州快捷酒店 12号",
+      "nameEn": "Yisu 杭州 Budget Hotel #12",
+      "address": "浙江省杭州市中心区示例路 112 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h12_1",
+          "name": "标准大床",
+          "price": 1659
+        },
+        {
+          "id": "r_h12_2",
+          "name": "高级双床",
+          "price": 1739
+        }
+      ],
+      "openTime": "2017-04-06",
+      "status": "rejected",
+      "rejectReason": "模拟：审核资料不全/图片不清晰",
+      "nearby": "杭州、近地铁、免费停车、含早、豪华、无烟、温泉",
+      "images": [],
+      "createdAt": "2024-01-14T10:00:00.000Z",
+      "updatedAt": "2024-01-14T10:00:00.000Z"
+    },
+    {
+      "id": "h13",
+      "merchantId": "u1",
+      "nameZh": "易宿·上海精选酒店 01号",
+      "nameEn": "Yisu 上海 Select Hotel #01",
+      "address": "上海市中心区示例路 101 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h13_1",
+          "name": "标准大床",
+          "price": 419
+        },
+        {
+          "id": "r_h13_2",
+          "name": "高级双床",
+          "price": 559
+        }
+      ],
+      "openTime": "2016-02-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "上海、网红、豪华",
+      "images": [],
+      "createdAt": "2024-01-15T10:00:00.000Z",
+      "updatedAt": "2024-01-15T10:00:00.000Z"
+    },
+    {
+      "id": "h14",
+      "merchantId": "u1",
+      "nameZh": "易宿·上海商务酒店 02号",
+      "nameEn": "Yisu 上海 Business Hotel #02",
+      "address": "上海市中心区示例路 102 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h14_1",
+          "name": "标准大床",
+          "price": 579
+        },
+        {
+          "id": "r_h14_2",
+          "name": "高级双床",
+          "price": 779
+        }
+      ],
+      "openTime": "2017-03-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "上海、商务、免费停车",
+      "images": [],
+      "createdAt": "2024-01-16T10:00:00.000Z",
+      "updatedAt": "2024-01-16T10:00:00.000Z"
+    },
+    {
+      "id": "h15",
+      "merchantId": "u1",
+      "nameZh": "易宿·上海度假酒店 03号",
+      "nameEn": "Yisu 上海 Resort Hotel #03",
+      "address": "上海市中心区示例路 103 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h15_1",
+          "name": "标准大床",
+          "price": 719
+        },
+        {
+          "id": "r_h15_2",
+          "name": "高级双床",
+          "price": 979
+        }
+      ],
+      "openTime": "2018-04-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "上海、度假、含早",
+      "images": [],
+      "createdAt": "2024-01-17T10:00:00.000Z",
+      "updatedAt": "2024-01-17T10:00:00.000Z"
+    },
+    {
+      "id": "h16",
+      "merchantId": "u1",
+      "nameZh": "易宿·上海设计师酒店 04号",
+      "nameEn": "Yisu 上海 Designer Hotel #04",
+      "address": "上海市中心区示例路 104 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h16_1",
+          "name": "标准大床",
+          "price": 1019
+        },
+        {
+          "id": "r_h16_2",
+          "name": "高级双床",
+          "price": 1099
+        }
+      ],
+      "openTime": "2019-05-05",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "上海、设计师、免费停车、近地铁、温泉",
+      "images": [],
+      "createdAt": "2024-01-18T10:00:00.000Z",
+      "updatedAt": "2024-01-18T10:00:00.000Z"
+    },
+    {
+      "id": "h17",
+      "merchantId": "u1",
+      "nameZh": "易宿·上海亲子酒店 05号",
+      "nameEn": "Yisu 上海 Family Hotel #05",
+      "address": "上海市中心区示例路 105 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h17_1",
+          "name": "标准大床",
+          "price": 1839
+        },
+        {
+          "id": "r_h17_2",
+          "name": "高级双床",
+          "price": 1979
+        }
+      ],
+      "openTime": "2020-06-06",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "上海、亲子、海景",
+      "images": [],
+      "createdAt": "2024-01-19T10:00:00.000Z",
+      "updatedAt": "2024-01-19T10:00:00.000Z"
+    },
+    {
+      "id": "h18",
+      "merchantId": "u1",
+      "nameZh": "易宿·上海快捷酒店 06号",
+      "nameEn": "Yisu 上海 Budget Hotel #06",
+      "address": "上海市中心区示例路 106 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h18_1",
+          "name": "标准大床",
+          "price": 99
+        },
+        {
+          "id": "r_h18_2",
+          "name": "高级双床",
+          "price": 299
+        }
+      ],
+      "openTime": "2021-07-07",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "上海、近地铁、免费停车、含早、豪华、泳池",
+      "images": [],
+      "createdAt": "2024-01-20T10:00:00.000Z",
+      "updatedAt": "2024-01-20T10:00:00.000Z"
+    },
+    {
+      "id": "h19",
+      "merchantId": "u1",
+      "nameZh": "易宿·上海精选酒店 07号",
+      "nameEn": "Yisu 上海 Select Hotel #07",
+      "address": "上海市中心区示例路 107 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h19_1",
+          "name": "标准大床",
+          "price": 349
+        },
+        {
+          "id": "r_h19_2",
+          "name": "高级双床",
+          "price": 609
+        }
+      ],
+      "openTime": "2022-08-01",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "上海、网红、温泉、健身房",
+      "images": [],
+      "createdAt": "2024-01-21T10:00:00.000Z",
+      "updatedAt": "2024-01-21T10:00:00.000Z"
+    },
+    {
+      "id": "h20",
+      "merchantId": "u1",
+      "nameZh": "易宿·上海商务酒店 08号",
+      "nameEn": "Yisu 上海 Business Hotel #08",
+      "address": "上海市中心区示例路 108 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h20_1",
+          "name": "标准大床",
+          "price": 469
+        },
+        {
+          "id": "r_h20_2",
+          "name": "高级双床",
+          "price": 549
+        }
+      ],
+      "openTime": "2023-09-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "上海、商务、免费停车、近地铁、海景、宠物友好",
+      "images": [],
+      "createdAt": "2024-01-22T10:00:00.000Z",
+      "updatedAt": "2024-01-22T10:00:00.000Z"
+    },
+    {
+      "id": "h21",
+      "merchantId": "u1",
+      "nameZh": "易宿·上海度假酒店 09号",
+      "nameEn": "Yisu 上海 Resort Hotel #09",
+      "address": "上海市中心区示例路 109 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h21_1",
+          "name": "标准大床",
+          "price": 619
+        },
+        {
+          "id": "r_h21_2",
+          "name": "高级双床",
+          "price": 759
+        }
+      ],
+      "openTime": "2024-01-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "上海、度假、含早、泳池、无烟",
+      "images": [],
+      "createdAt": "2024-01-23T10:00:00.000Z",
+      "updatedAt": "2024-01-23T10:00:00.000Z"
+    },
+    {
+      "id": "h22",
+      "merchantId": "u1",
+      "nameZh": "易宿·上海设计师酒店 10号",
+      "nameEn": "Yisu 上海 Designer Hotel #10",
+      "address": "上海市中心区示例路 110 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h22_1",
+          "name": "标准大床",
+          "price": 819
+        },
+        {
+          "id": "r_h22_2",
+          "name": "高级双床",
+          "price": 1019
+        }
+      ],
+      "openTime": "2015-02-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "上海、设计师、免费停车、亲子、健身房、豪华",
+      "images": [],
+      "createdAt": "2024-01-24T10:00:00.000Z",
+      "updatedAt": "2024-01-24T10:00:00.000Z"
+    },
+    {
+      "id": "h23",
+      "merchantId": "u1",
+      "nameZh": "易宿·上海亲子酒店 11号",
+      "nameEn": "Yisu 上海 Family Hotel #11",
+      "address": "上海市中心区示例路 111 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h23_1",
+          "name": "标准大床",
+          "price": 1239
+        },
+        {
+          "id": "r_h23_2",
+          "name": "高级双床",
+          "price": 1499
+        }
+      ],
+      "openTime": "2016-03-05",
+      "status": "pending",
+      "rejectReason": null,
+      "nearby": "上海、亲子、宠物友好、免费停车",
+      "images": [],
+      "createdAt": "2024-01-25T10:00:00.000Z",
+      "updatedAt": "2024-01-25T10:00:00.000Z"
+    },
+    {
+      "id": "h24",
+      "merchantId": "u1",
+      "nameZh": "易宿·上海快捷酒店 12号",
+      "nameEn": "Yisu 上海 Budget Hotel #12",
+      "address": "上海市中心区示例路 112 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h24_1",
+          "name": "标准大床",
+          "price": 1659
+        },
+        {
+          "id": "r_h24_2",
+          "name": "高级双床",
+          "price": 1739
+        }
+      ],
+      "openTime": "2017-04-06",
+      "status": "rejected",
+      "rejectReason": "模拟：审核资料不全/图片不清晰",
+      "nearby": "上海、近地铁、免费停车、含早、豪华、无烟",
+      "images": [],
+      "createdAt": "2024-01-26T10:00:00.000Z",
+      "updatedAt": "2024-01-26T10:00:00.000Z"
+    },
+    {
+      "id": "h25",
+      "merchantId": "u1",
+      "nameZh": "易宿·北京精选酒店 01号",
+      "nameEn": "Yisu 北京 Select Hotel #01",
+      "address": "北京市中心区示例路 101 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h25_1",
+          "name": "标准大床",
+          "price": 419
+        },
+        {
+          "id": "r_h25_2",
+          "name": "高级双床",
+          "price": 559
+        }
+      ],
+      "openTime": "2016-02-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "北京、网红、健身房",
+      "images": [],
+      "createdAt": "2024-01-27T10:00:00.000Z",
+      "updatedAt": "2024-01-27T10:00:00.000Z"
+    },
+    {
+      "id": "h26",
+      "merchantId": "u1",
+      "nameZh": "易宿·北京商务酒店 02号",
+      "nameEn": "Yisu 北京 Business Hotel #02",
+      "address": "北京市中心区示例路 102 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h26_1",
+          "name": "标准大床",
+          "price": 579
+        },
+        {
+          "id": "r_h26_2",
+          "name": "高级双床",
+          "price": 779
+        }
+      ],
+      "openTime": "2017-03-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "北京、商务、免费停车、宠物友好",
+      "images": [],
+      "createdAt": "2024-01-28T10:00:00.000Z",
+      "updatedAt": "2024-01-28T10:00:00.000Z"
+    },
+    {
+      "id": "h27",
+      "merchantId": "u1",
+      "nameZh": "易宿·北京度假酒店 03号",
+      "nameEn": "Yisu 北京 Resort Hotel #03",
+      "address": "北京市中心区示例路 103 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h27_1",
+          "name": "标准大床",
+          "price": 719
+        },
+        {
+          "id": "r_h27_2",
+          "name": "高级双床",
+          "price": 979
+        }
+      ],
+      "openTime": "2018-04-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "北京、度假、含早、无烟",
+      "images": [],
+      "createdAt": "2024-01-29T10:00:00.000Z",
+      "updatedAt": "2024-01-29T10:00:00.000Z"
+    },
+    {
+      "id": "h28",
+      "merchantId": "u1",
+      "nameZh": "易宿·北京设计师酒店 04号",
+      "nameEn": "Yisu 北京 Designer Hotel #04",
+      "address": "北京市中心区示例路 104 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h28_1",
+          "name": "标准大床",
+          "price": 1019
+        },
+        {
+          "id": "r_h28_2",
+          "name": "高级双床",
+          "price": 1099
+        }
+      ],
+      "openTime": "2019-05-05",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "北京、设计师、免费停车、近地铁、豪华",
+      "images": [],
+      "createdAt": "2024-01-30T10:00:00.000Z",
+      "updatedAt": "2024-01-30T10:00:00.000Z"
+    },
+    {
+      "id": "h29",
+      "merchantId": "u1",
+      "nameZh": "易宿·北京亲子酒店 05号",
+      "nameEn": "Yisu 北京 Family Hotel #05",
+      "address": "北京市中心区示例路 105 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h29_1",
+          "name": "标准大床",
+          "price": 1839
+        },
+        {
+          "id": "r_h29_2",
+          "name": "高级双床",
+          "price": 1979
+        }
+      ],
+      "openTime": "2020-06-06",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "北京、亲子、免费停车",
+      "images": [],
+      "createdAt": "2024-01-31T10:00:00.000Z",
+      "updatedAt": "2024-01-31T10:00:00.000Z"
+    },
+    {
+      "id": "h30",
+      "merchantId": "u1",
+      "nameZh": "易宿·北京快捷酒店 06号",
+      "nameEn": "Yisu 北京 Budget Hotel #06",
+      "address": "北京市中心区示例路 106 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h30_1",
+          "name": "标准大床",
+          "price": 99
+        },
+        {
+          "id": "r_h30_2",
+          "name": "高级双床",
+          "price": 299
+        }
+      ],
+      "openTime": "2021-07-07",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "北京、近地铁、免费停车、含早、豪华",
+      "images": [],
+      "createdAt": "2024-02-01T10:00:00.000Z",
+      "updatedAt": "2024-02-01T10:00:00.000Z"
+    },
+    {
+      "id": "h31",
+      "merchantId": "u1",
+      "nameZh": "易宿·北京精选酒店 07号",
+      "nameEn": "Yisu 北京 Select Hotel #07",
+      "address": "北京市中心区示例路 107 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h31_1",
+          "name": "标准大床",
+          "price": 349
+        },
+        {
+          "id": "r_h31_2",
+          "name": "高级双床",
+          "price": 609
+        }
+      ],
+      "openTime": "2022-08-01",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "北京、网红、温泉",
+      "images": [],
+      "createdAt": "2024-02-02T10:00:00.000Z",
+      "updatedAt": "2024-02-02T10:00:00.000Z"
+    },
+    {
+      "id": "h32",
+      "merchantId": "u1",
+      "nameZh": "易宿·北京商务酒店 08号",
+      "nameEn": "Yisu 北京 Business Hotel #08",
+      "address": "北京市中心区示例路 108 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h32_1",
+          "name": "标准大床",
+          "price": 469
+        },
+        {
+          "id": "r_h32_2",
+          "name": "高级双床",
+          "price": 549
+        }
+      ],
+      "openTime": "2023-09-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "北京、商务、免费停车、近地铁、海景",
+      "images": [],
+      "createdAt": "2024-02-03T10:00:00.000Z",
+      "updatedAt": "2024-02-03T10:00:00.000Z"
+    },
+    {
+      "id": "h33",
+      "merchantId": "u1",
+      "nameZh": "易宿·北京度假酒店 09号",
+      "nameEn": "Yisu 北京 Resort Hotel #09",
+      "address": "北京市中心区示例路 109 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h33_1",
+          "name": "标准大床",
+          "price": 619
+        },
+        {
+          "id": "r_h33_2",
+          "name": "高级双床",
+          "price": 759
+        }
+      ],
+      "openTime": "2024-01-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "北京、度假、含早、泳池",
+      "images": [],
+      "createdAt": "2024-02-04T10:00:00.000Z",
+      "updatedAt": "2024-02-04T10:00:00.000Z"
+    },
+    {
+      "id": "h34",
+      "merchantId": "u1",
+      "nameZh": "易宿·北京设计师酒店 10号",
+      "nameEn": "Yisu 北京 Designer Hotel #10",
+      "address": "北京市中心区示例路 110 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h34_1",
+          "name": "标准大床",
+          "price": 819
+        },
+        {
+          "id": "r_h34_2",
+          "name": "高级双床",
+          "price": 1019
+        }
+      ],
+      "openTime": "2015-02-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "北京、设计师、免费停车、亲子、健身房",
+      "images": [],
+      "createdAt": "2024-02-05T10:00:00.000Z",
+      "updatedAt": "2024-02-05T10:00:00.000Z"
+    },
+    {
+      "id": "h35",
+      "merchantId": "u1",
+      "nameZh": "易宿·北京亲子酒店 11号",
+      "nameEn": "Yisu 北京 Family Hotel #11",
+      "address": "北京市中心区示例路 111 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h35_1",
+          "name": "标准大床",
+          "price": 1239
+        },
+        {
+          "id": "r_h35_2",
+          "name": "高级双床",
+          "price": 1499
+        }
+      ],
+      "openTime": "2016-03-05",
+      "status": "pending",
+      "rejectReason": null,
+      "nearby": "北京、亲子、宠物友好",
+      "images": [],
+      "createdAt": "2024-02-06T10:00:00.000Z",
+      "updatedAt": "2024-02-06T10:00:00.000Z"
+    },
+    {
+      "id": "h36",
+      "merchantId": "u1",
+      "nameZh": "易宿·北京快捷酒店 12号",
+      "nameEn": "Yisu 北京 Budget Hotel #12",
+      "address": "北京市中心区示例路 112 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h36_1",
+          "name": "标准大床",
+          "price": 1659
+        },
+        {
+          "id": "r_h36_2",
+          "name": "高级双床",
+          "price": 1739
+        }
+      ],
+      "openTime": "2017-04-06",
+      "status": "rejected",
+      "rejectReason": "模拟：审核资料不全/图片不清晰",
+      "nearby": "北京、近地铁、免费停车、含早、豪华、无烟",
+      "images": [],
+      "createdAt": "2024-02-07T10:00:00.000Z",
+      "updatedAt": "2024-02-07T10:00:00.000Z"
+    },
+    {
+      "id": "h37",
+      "merchantId": "u1",
+      "nameZh": "易宿·深圳精选酒店 01号",
+      "nameEn": "Yisu 深圳 Select Hotel #01",
+      "address": "广东省深圳市中心区示例路 101 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h37_1",
+          "name": "标准大床",
+          "price": 419
+        },
+        {
+          "id": "r_h37_2",
+          "name": "高级双床",
+          "price": 559
+        }
+      ],
+      "openTime": "2016-02-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "深圳、网红、海景",
+      "images": [],
+      "createdAt": "2024-02-08T10:00:00.000Z",
+      "updatedAt": "2024-02-08T10:00:00.000Z"
+    },
+    {
+      "id": "h38",
+      "merchantId": "u1",
+      "nameZh": "易宿·深圳商务酒店 02号",
+      "nameEn": "Yisu 深圳 Business Hotel #02",
+      "address": "广东省深圳市中心区示例路 102 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h38_1",
+          "name": "标准大床",
+          "price": 579
+        },
+        {
+          "id": "r_h38_2",
+          "name": "高级双床",
+          "price": 779
+        }
+      ],
+      "openTime": "2017-03-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "深圳、商务、免费停车、泳池",
+      "images": [],
+      "createdAt": "2024-02-09T10:00:00.000Z",
+      "updatedAt": "2024-02-09T10:00:00.000Z"
+    },
+    {
+      "id": "h39",
+      "merchantId": "u1",
+      "nameZh": "易宿·深圳度假酒店 03号",
+      "nameEn": "Yisu 深圳 Resort Hotel #03",
+      "address": "广东省深圳市中心区示例路 103 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h39_1",
+          "name": "标准大床",
+          "price": 719
+        },
+        {
+          "id": "r_h39_2",
+          "name": "高级双床",
+          "price": 979
+        }
+      ],
+      "openTime": "2018-04-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "深圳、度假、含早、健身房",
+      "images": [],
+      "createdAt": "2024-02-10T10:00:00.000Z",
+      "updatedAt": "2024-02-10T10:00:00.000Z"
+    },
+    {
+      "id": "h40",
+      "merchantId": "u1",
+      "nameZh": "易宿·深圳设计师酒店 04号",
+      "nameEn": "Yisu 深圳 Designer Hotel #04",
+      "address": "广东省深圳市中心区示例路 104 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h40_1",
+          "name": "标准大床",
+          "price": 1019
+        },
+        {
+          "id": "r_h40_2",
+          "name": "高级双床",
+          "price": 1099
+        }
+      ],
+      "openTime": "2019-05-05",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "深圳、设计师、免费停车、近地铁、宠物友好",
+      "images": [],
+      "createdAt": "2024-02-11T10:00:00.000Z",
+      "updatedAt": "2024-02-11T10:00:00.000Z"
+    },
+    {
+      "id": "h41",
+      "merchantId": "u1",
+      "nameZh": "易宿·深圳亲子酒店 05号",
+      "nameEn": "Yisu 深圳 Family Hotel #05",
+      "address": "广东省深圳市中心区示例路 105 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h41_1",
+          "name": "标准大床",
+          "price": 1839
+        },
+        {
+          "id": "r_h41_2",
+          "name": "高级双床",
+          "price": 1979
+        }
+      ],
+      "openTime": "2020-06-06",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "深圳、亲子、无烟",
+      "images": [],
+      "createdAt": "2024-02-12T10:00:00.000Z",
+      "updatedAt": "2024-02-12T10:00:00.000Z"
+    },
+    {
+      "id": "h42",
+      "merchantId": "u1",
+      "nameZh": "易宿·深圳快捷酒店 06号",
+      "nameEn": "Yisu 深圳 Budget Hotel #06",
+      "address": "广东省深圳市中心区示例路 106 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h42_1",
+          "name": "标准大床",
+          "price": 99
+        },
+        {
+          "id": "r_h42_2",
+          "name": "高级双床",
+          "price": 299
+        }
+      ],
+      "openTime": "2021-07-07",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "深圳、近地铁、免费停车、含早、豪华",
+      "images": [],
+      "createdAt": "2024-02-13T10:00:00.000Z",
+      "updatedAt": "2024-02-13T10:00:00.000Z"
+    },
+    {
+      "id": "h43",
+      "merchantId": "u1",
+      "nameZh": "易宿·深圳精选酒店 07号",
+      "nameEn": "Yisu 深圳 Select Hotel #07",
+      "address": "广东省深圳市中心区示例路 107 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h43_1",
+          "name": "标准大床",
+          "price": 349
+        },
+        {
+          "id": "r_h43_2",
+          "name": "高级双床",
+          "price": 609
+        }
+      ],
+      "openTime": "2022-08-01",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "深圳、网红、温泉、免费停车",
+      "images": [],
+      "createdAt": "2024-02-14T10:00:00.000Z",
+      "updatedAt": "2024-02-14T10:00:00.000Z"
+    },
+    {
+      "id": "h44",
+      "merchantId": "u1",
+      "nameZh": "易宿·深圳商务酒店 08号",
+      "nameEn": "Yisu 深圳 Business Hotel #08",
+      "address": "广东省深圳市中心区示例路 108 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h44_1",
+          "name": "标准大床",
+          "price": 469
+        },
+        {
+          "id": "r_h44_2",
+          "name": "高级双床",
+          "price": 549
+        }
+      ],
+      "openTime": "2023-09-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "深圳、商务、免费停车、近地铁、海景、含早",
+      "images": [],
+      "createdAt": "2024-02-15T10:00:00.000Z",
+      "updatedAt": "2024-02-15T10:00:00.000Z"
+    },
+    {
+      "id": "h45",
+      "merchantId": "u1",
+      "nameZh": "易宿·深圳度假酒店 09号",
+      "nameEn": "Yisu 深圳 Resort Hotel #09",
+      "address": "广东省深圳市中心区示例路 109 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h45_1",
+          "name": "标准大床",
+          "price": 619
+        },
+        {
+          "id": "r_h45_2",
+          "name": "高级双床",
+          "price": 759
+        }
+      ],
+      "openTime": "2024-01-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "深圳、度假、含早、泳池、温泉",
+      "images": [],
+      "createdAt": "2024-02-16T10:00:00.000Z",
+      "updatedAt": "2024-02-16T10:00:00.000Z"
+    },
+    {
+      "id": "h46",
+      "merchantId": "u1",
+      "nameZh": "易宿·深圳设计师酒店 10号",
+      "nameEn": "Yisu 深圳 Designer Hotel #10",
+      "address": "广东省深圳市中心区示例路 110 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h46_1",
+          "name": "标准大床",
+          "price": 819
+        },
+        {
+          "id": "r_h46_2",
+          "name": "高级双床",
+          "price": 1019
+        }
+      ],
+      "openTime": "2015-02-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "深圳、设计师、免费停车、亲子、健身房、海景",
+      "images": [],
+      "createdAt": "2024-02-17T10:00:00.000Z",
+      "updatedAt": "2024-02-17T10:00:00.000Z"
+    },
+    {
+      "id": "h47",
+      "merchantId": "u1",
+      "nameZh": "易宿·深圳亲子酒店 11号",
+      "nameEn": "Yisu 深圳 Family Hotel #11",
+      "address": "广东省深圳市中心区示例路 111 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h47_1",
+          "name": "标准大床",
+          "price": 1239
+        },
+        {
+          "id": "r_h47_2",
+          "name": "高级双床",
+          "price": 1499
+        }
+      ],
+      "openTime": "2016-03-05",
+      "status": "pending",
+      "rejectReason": null,
+      "nearby": "深圳、亲子、宠物友好、泳池",
+      "images": [],
+      "createdAt": "2024-02-18T10:00:00.000Z",
+      "updatedAt": "2024-02-18T10:00:00.000Z"
+    },
+    {
+      "id": "h48",
+      "merchantId": "u1",
+      "nameZh": "易宿·深圳快捷酒店 12号",
+      "nameEn": "Yisu 深圳 Budget Hotel #12",
+      "address": "广东省深圳市中心区示例路 112 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h48_1",
+          "name": "标准大床",
+          "price": 1659
+        },
+        {
+          "id": "r_h48_2",
+          "name": "高级双床",
+          "price": 1739
+        }
+      ],
+      "openTime": "2017-04-06",
+      "status": "rejected",
+      "rejectReason": "模拟：审核资料不全/图片不清晰",
+      "nearby": "深圳、近地铁、免费停车、含早、豪华、无烟、健身房",
+      "images": [],
+      "createdAt": "2024-02-19T10:00:00.000Z",
+      "updatedAt": "2024-02-19T10:00:00.000Z"
+    },
+    {
+      "id": "h49",
+      "merchantId": "u1",
+      "nameZh": "易宿·广州精选酒店 01号",
+      "nameEn": "Yisu 广州 Select Hotel #01",
+      "address": "广东省广州市中心区示例路 101 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h49_1",
+          "name": "标准大床",
+          "price": 419
+        },
+        {
+          "id": "r_h49_2",
+          "name": "高级双床",
+          "price": 559
+        }
+      ],
+      "openTime": "2016-02-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "广州、网红、免费停车",
+      "images": [],
+      "createdAt": "2024-02-20T10:00:00.000Z",
+      "updatedAt": "2024-02-20T10:00:00.000Z"
+    },
+    {
+      "id": "h50",
+      "merchantId": "u1",
+      "nameZh": "易宿·广州商务酒店 02号",
+      "nameEn": "Yisu 广州 Business Hotel #02",
+      "address": "广东省广州市中心区示例路 102 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h50_1",
+          "name": "标准大床",
+          "price": 579
+        },
+        {
+          "id": "r_h50_2",
+          "name": "高级双床",
+          "price": 779
+        }
+      ],
+      "openTime": "2017-03-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "广州、商务、免费停车、含早",
+      "images": [],
+      "createdAt": "2024-02-21T10:00:00.000Z",
+      "updatedAt": "2024-02-21T10:00:00.000Z"
+    },
+    {
+      "id": "h51",
+      "merchantId": "u1",
+      "nameZh": "易宿·广州度假酒店 03号",
+      "nameEn": "Yisu 广州 Resort Hotel #03",
+      "address": "广东省广州市中心区示例路 103 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h51_1",
+          "name": "标准大床",
+          "price": 719
+        },
+        {
+          "id": "r_h51_2",
+          "name": "高级双床",
+          "price": 979
+        }
+      ],
+      "openTime": "2018-04-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "广州、度假、含早、温泉",
+      "images": [],
+      "createdAt": "2024-02-22T10:00:00.000Z",
+      "updatedAt": "2024-02-22T10:00:00.000Z"
+    },
+    {
+      "id": "h52",
+      "merchantId": "u1",
+      "nameZh": "易宿·广州设计师酒店 04号",
+      "nameEn": "Yisu 广州 Designer Hotel #04",
+      "address": "广东省广州市中心区示例路 104 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h52_1",
+          "name": "标准大床",
+          "price": 1019
+        },
+        {
+          "id": "r_h52_2",
+          "name": "高级双床",
+          "price": 1099
+        }
+      ],
+      "openTime": "2019-05-05",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "广州、设计师、免费停车、近地铁、海景",
+      "images": [],
+      "createdAt": "2024-02-23T10:00:00.000Z",
+      "updatedAt": "2024-02-23T10:00:00.000Z"
+    },
+    {
+      "id": "h53",
+      "merchantId": "u1",
+      "nameZh": "易宿·广州亲子酒店 05号",
+      "nameEn": "Yisu 广州 Family Hotel #05",
+      "address": "广东省广州市中心区示例路 105 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h53_1",
+          "name": "标准大床",
+          "price": 1839
+        },
+        {
+          "id": "r_h53_2",
+          "name": "高级双床",
+          "price": 1979
+        }
+      ],
+      "openTime": "2020-06-06",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "广州、亲子、泳池",
+      "images": [],
+      "createdAt": "2024-02-24T10:00:00.000Z",
+      "updatedAt": "2024-02-24T10:00:00.000Z"
+    },
+    {
+      "id": "h54",
+      "merchantId": "u1",
+      "nameZh": "易宿·广州快捷酒店 06号",
+      "nameEn": "Yisu 广州 Budget Hotel #06",
+      "address": "广东省广州市中心区示例路 106 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h54_1",
+          "name": "标准大床",
+          "price": 99
+        },
+        {
+          "id": "r_h54_2",
+          "name": "高级双床",
+          "price": 299
+        }
+      ],
+      "openTime": "2021-07-07",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "广州、近地铁、免费停车、含早、豪华、健身房",
+      "images": [],
+      "createdAt": "2024-02-25T10:00:00.000Z",
+      "updatedAt": "2024-02-25T10:00:00.000Z"
+    },
+    {
+      "id": "h55",
+      "merchantId": "u1",
+      "nameZh": "易宿·广州精选酒店 07号",
+      "nameEn": "Yisu 广州 Select Hotel #07",
+      "address": "广东省广州市中心区示例路 107 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h55_1",
+          "name": "标准大床",
+          "price": 349
+        },
+        {
+          "id": "r_h55_2",
+          "name": "高级双床",
+          "price": 609
+        }
+      ],
+      "openTime": "2022-08-01",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "广州、网红、温泉、宠物友好",
+      "images": [],
+      "createdAt": "2024-02-26T10:00:00.000Z",
+      "updatedAt": "2024-02-26T10:00:00.000Z"
+    },
+    {
+      "id": "h56",
+      "merchantId": "u1",
+      "nameZh": "易宿·广州商务酒店 08号",
+      "nameEn": "Yisu 广州 Business Hotel #08",
+      "address": "广东省广州市中心区示例路 108 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h56_1",
+          "name": "标准大床",
+          "price": 469
+        },
+        {
+          "id": "r_h56_2",
+          "name": "高级双床",
+          "price": 549
+        }
+      ],
+      "openTime": "2023-09-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "广州、商务、免费停车、近地铁、海景、无烟",
+      "images": [],
+      "createdAt": "2024-02-27T10:00:00.000Z",
+      "updatedAt": "2024-02-27T10:00:00.000Z"
+    },
+    {
+      "id": "h57",
+      "merchantId": "u1",
+      "nameZh": "易宿·广州度假酒店 09号",
+      "nameEn": "Yisu 广州 Resort Hotel #09",
+      "address": "广东省广州市中心区示例路 109 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h57_1",
+          "name": "标准大床",
+          "price": 619
+        },
+        {
+          "id": "r_h57_2",
+          "name": "高级双床",
+          "price": 759
+        }
+      ],
+      "openTime": "2024-01-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "广州、度假、含早、泳池、豪华",
+      "images": [],
+      "createdAt": "2024-02-28T10:00:00.000Z",
+      "updatedAt": "2024-02-28T10:00:00.000Z"
+    },
+    {
+      "id": "h58",
+      "merchantId": "u1",
+      "nameZh": "易宿·广州设计师酒店 10号",
+      "nameEn": "Yisu 广州 Designer Hotel #10",
+      "address": "广东省广州市中心区示例路 110 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h58_1",
+          "name": "标准大床",
+          "price": 819
+        },
+        {
+          "id": "r_h58_2",
+          "name": "高级双床",
+          "price": 1019
+        }
+      ],
+      "openTime": "2015-02-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "广州、设计师、免费停车、亲子、健身房",
+      "images": [],
+      "createdAt": "2024-02-29T10:00:00.000Z",
+      "updatedAt": "2024-02-29T10:00:00.000Z"
+    },
+    {
+      "id": "h59",
+      "merchantId": "u1",
+      "nameZh": "易宿·广州亲子酒店 11号",
+      "nameEn": "Yisu 广州 Family Hotel #11",
+      "address": "广东省广州市中心区示例路 111 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h59_1",
+          "name": "标准大床",
+          "price": 1239
+        },
+        {
+          "id": "r_h59_2",
+          "name": "高级双床",
+          "price": 1499
+        }
+      ],
+      "openTime": "2016-03-05",
+      "status": "pending",
+      "rejectReason": null,
+      "nearby": "广州、亲子、宠物友好、含早",
+      "images": [],
+      "createdAt": "2024-03-01T10:00:00.000Z",
+      "updatedAt": "2024-03-01T10:00:00.000Z"
+    },
+    {
+      "id": "h60",
+      "merchantId": "u1",
+      "nameZh": "易宿·广州快捷酒店 12号",
+      "nameEn": "Yisu 广州 Budget Hotel #12",
+      "address": "广东省广州市中心区示例路 112 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h60_1",
+          "name": "标准大床",
+          "price": 1659
+        },
+        {
+          "id": "r_h60_2",
+          "name": "高级双床",
+          "price": 1739
+        }
+      ],
+      "openTime": "2017-04-06",
+      "status": "rejected",
+      "rejectReason": "模拟：审核资料不全/图片不清晰",
+      "nearby": "广州、近地铁、免费停车、含早、豪华、无烟、温泉",
+      "images": [],
+      "createdAt": "2024-03-02T10:00:00.000Z",
+      "updatedAt": "2024-03-02T10:00:00.000Z"
+    },
+    {
+      "id": "h61",
+      "merchantId": "u1",
+      "nameZh": "易宿·成都精选酒店 01号",
+      "nameEn": "Yisu 成都 Select Hotel #01",
+      "address": "四川省成都市中心区示例路 101 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h61_1",
+          "name": "标准大床",
+          "price": 419
+        },
+        {
+          "id": "r_h61_2",
+          "name": "高级双床",
+          "price": 559
+        }
+      ],
+      "openTime": "2016-02-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "成都、网红、泳池",
+      "images": [],
+      "createdAt": "2024-03-03T10:00:00.000Z",
+      "updatedAt": "2024-03-03T10:00:00.000Z"
+    },
+    {
+      "id": "h62",
+      "merchantId": "u1",
+      "nameZh": "易宿·成都商务酒店 02号",
+      "nameEn": "Yisu 成都 Business Hotel #02",
+      "address": "四川省成都市中心区示例路 102 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h62_1",
+          "name": "标准大床",
+          "price": 579
+        },
+        {
+          "id": "r_h62_2",
+          "name": "高级双床",
+          "price": 779
+        }
+      ],
+      "openTime": "2017-03-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "成都、商务、免费停车、健身房",
+      "images": [],
+      "createdAt": "2024-03-04T10:00:00.000Z",
+      "updatedAt": "2024-03-04T10:00:00.000Z"
+    },
+    {
+      "id": "h63",
+      "merchantId": "u1",
+      "nameZh": "易宿·成都度假酒店 03号",
+      "nameEn": "Yisu 成都 Resort Hotel #03",
+      "address": "四川省成都市中心区示例路 103 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h63_1",
+          "name": "标准大床",
+          "price": 719
+        },
+        {
+          "id": "r_h63_2",
+          "name": "高级双床",
+          "price": 979
+        }
+      ],
+      "openTime": "2018-04-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "成都、度假、含早、宠物友好",
+      "images": [],
+      "createdAt": "2024-03-05T10:00:00.000Z",
+      "updatedAt": "2024-03-05T10:00:00.000Z"
+    },
+    {
+      "id": "h64",
+      "merchantId": "u1",
+      "nameZh": "易宿·成都设计师酒店 04号",
+      "nameEn": "Yisu 成都 Designer Hotel #04",
+      "address": "四川省成都市中心区示例路 104 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h64_1",
+          "name": "标准大床",
+          "price": 1019
+        },
+        {
+          "id": "r_h64_2",
+          "name": "高级双床",
+          "price": 1099
+        }
+      ],
+      "openTime": "2019-05-05",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "成都、设计师、免费停车、近地铁、无烟",
+      "images": [],
+      "createdAt": "2024-03-06T10:00:00.000Z",
+      "updatedAt": "2024-03-06T10:00:00.000Z"
+    },
+    {
+      "id": "h65",
+      "merchantId": "u1",
+      "nameZh": "易宿·成都亲子酒店 05号",
+      "nameEn": "Yisu 成都 Family Hotel #05",
+      "address": "四川省成都市中心区示例路 105 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h65_1",
+          "name": "标准大床",
+          "price": 1839
+        },
+        {
+          "id": "r_h65_2",
+          "name": "高级双床",
+          "price": 1979
+        }
+      ],
+      "openTime": "2020-06-06",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "成都、亲子、豪华",
+      "images": [],
+      "createdAt": "2024-03-07T10:00:00.000Z",
+      "updatedAt": "2024-03-07T10:00:00.000Z"
+    },
+    {
+      "id": "h66",
+      "merchantId": "u1",
+      "nameZh": "易宿·成都快捷酒店 06号",
+      "nameEn": "Yisu 成都 Budget Hotel #06",
+      "address": "四川省成都市中心区示例路 106 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h66_1",
+          "name": "标准大床",
+          "price": 99
+        },
+        {
+          "id": "r_h66_2",
+          "name": "高级双床",
+          "price": 299
+        }
+      ],
+      "openTime": "2021-07-07",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "成都、近地铁、免费停车、含早、豪华",
+      "images": [],
+      "createdAt": "2024-03-08T10:00:00.000Z",
+      "updatedAt": "2024-03-08T10:00:00.000Z"
+    },
+    {
+      "id": "h67",
+      "merchantId": "u1",
+      "nameZh": "易宿·成都精选酒店 07号",
+      "nameEn": "Yisu 成都 Select Hotel #07",
+      "address": "四川省成都市中心区示例路 107 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h67_1",
+          "name": "标准大床",
+          "price": 349
+        },
+        {
+          "id": "r_h67_2",
+          "name": "高级双床",
+          "price": 609
+        }
+      ],
+      "openTime": "2022-08-01",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "成都、网红、温泉、含早",
+      "images": [],
+      "createdAt": "2024-03-09T10:00:00.000Z",
+      "updatedAt": "2024-03-09T10:00:00.000Z"
+    },
+    {
+      "id": "h68",
+      "merchantId": "u1",
+      "nameZh": "易宿·成都商务酒店 08号",
+      "nameEn": "Yisu 成都 Business Hotel #08",
+      "address": "四川省成都市中心区示例路 108 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h68_1",
+          "name": "标准大床",
+          "price": 469
+        },
+        {
+          "id": "r_h68_2",
+          "name": "高级双床",
+          "price": 549
+        }
+      ],
+      "openTime": "2023-09-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "成都、商务、免费停车、近地铁、海景、温泉",
+      "images": [],
+      "createdAt": "2024-03-10T10:00:00.000Z",
+      "updatedAt": "2024-03-10T10:00:00.000Z"
+    },
+    {
+      "id": "h69",
+      "merchantId": "u1",
+      "nameZh": "易宿·成都度假酒店 09号",
+      "nameEn": "Yisu 成都 Resort Hotel #09",
+      "address": "四川省成都市中心区示例路 109 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h69_1",
+          "name": "标准大床",
+          "price": 619
+        },
+        {
+          "id": "r_h69_2",
+          "name": "高级双床",
+          "price": 759
+        }
+      ],
+      "openTime": "2024-01-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "成都、度假、含早、泳池、海景",
+      "images": [],
+      "createdAt": "2024-03-11T10:00:00.000Z",
+      "updatedAt": "2024-03-11T10:00:00.000Z"
+    },
+    {
+      "id": "h70",
+      "merchantId": "u1",
+      "nameZh": "易宿·成都设计师酒店 10号",
+      "nameEn": "Yisu 成都 Designer Hotel #10",
+      "address": "四川省成都市中心区示例路 110 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h70_1",
+          "name": "标准大床",
+          "price": 819
+        },
+        {
+          "id": "r_h70_2",
+          "name": "高级双床",
+          "price": 1019
+        }
+      ],
+      "openTime": "2015-02-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "成都、设计师、免费停车、亲子、健身房、泳池",
+      "images": [],
+      "createdAt": "2024-03-12T10:00:00.000Z",
+      "updatedAt": "2024-03-12T10:00:00.000Z"
+    },
+    {
+      "id": "h71",
+      "merchantId": "u1",
+      "nameZh": "易宿·成都亲子酒店 11号",
+      "nameEn": "Yisu 成都 Family Hotel #11",
+      "address": "四川省成都市中心区示例路 111 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h71_1",
+          "name": "标准大床",
+          "price": 1239
+        },
+        {
+          "id": "r_h71_2",
+          "name": "高级双床",
+          "price": 1499
+        }
+      ],
+      "openTime": "2016-03-05",
+      "status": "pending",
+      "rejectReason": null,
+      "nearby": "成都、亲子、宠物友好、健身房",
+      "images": [],
+      "createdAt": "2024-03-13T10:00:00.000Z",
+      "updatedAt": "2024-03-13T10:00:00.000Z"
+    },
+    {
+      "id": "h72",
+      "merchantId": "u1",
+      "nameZh": "易宿·成都快捷酒店 12号",
+      "nameEn": "Yisu 成都 Budget Hotel #12",
+      "address": "四川省成都市中心区示例路 112 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h72_1",
+          "name": "标准大床",
+          "price": 1659
+        },
+        {
+          "id": "r_h72_2",
+          "name": "高级双床",
+          "price": 1739
+        }
+      ],
+      "openTime": "2017-04-06",
+      "status": "rejected",
+      "rejectReason": "模拟：审核资料不全/图片不清晰",
+      "nearby": "成都、近地铁、免费停车、含早、豪华、无烟、宠物友好",
+      "images": [],
+      "createdAt": "2024-03-14T10:00:00.000Z",
+      "updatedAt": "2024-03-14T10:00:00.000Z"
+    },
+    {
+      "id": "h73",
+      "merchantId": "u1",
+      "nameZh": "易宿·西安精选酒店 01号",
+      "nameEn": "Yisu 西安 Select Hotel #01",
+      "address": "陕西省西安市中心区示例路 101 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h73_1",
+          "name": "标准大床",
+          "price": 419
+        },
+        {
+          "id": "r_h73_2",
+          "name": "高级双床",
+          "price": 559
+        }
+      ],
+      "openTime": "2016-02-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "西安、网红、含早",
+      "images": [],
+      "createdAt": "2024-03-15T10:00:00.000Z",
+      "updatedAt": "2024-03-15T10:00:00.000Z"
+    },
+    {
+      "id": "h74",
+      "merchantId": "u1",
+      "nameZh": "易宿·西安商务酒店 02号",
+      "nameEn": "Yisu 西安 Business Hotel #02",
+      "address": "陕西省西安市中心区示例路 102 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h74_1",
+          "name": "标准大床",
+          "price": 579
+        },
+        {
+          "id": "r_h74_2",
+          "name": "高级双床",
+          "price": 779
+        }
+      ],
+      "openTime": "2017-03-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "西安、商务、免费停车、温泉",
+      "images": [],
+      "createdAt": "2024-03-16T10:00:00.000Z",
+      "updatedAt": "2024-03-16T10:00:00.000Z"
+    },
+    {
+      "id": "h75",
+      "merchantId": "u1",
+      "nameZh": "易宿·西安度假酒店 03号",
+      "nameEn": "Yisu 西安 Resort Hotel #03",
+      "address": "陕西省西安市中心区示例路 103 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h75_1",
+          "name": "标准大床",
+          "price": 719
+        },
+        {
+          "id": "r_h75_2",
+          "name": "高级双床",
+          "price": 979
+        }
+      ],
+      "openTime": "2018-04-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "西安、度假、含早、海景",
+      "images": [],
+      "createdAt": "2024-03-17T10:00:00.000Z",
+      "updatedAt": "2024-03-17T10:00:00.000Z"
+    },
+    {
+      "id": "h76",
+      "merchantId": "u1",
+      "nameZh": "易宿·西安设计师酒店 04号",
+      "nameEn": "Yisu 西安 Designer Hotel #04",
+      "address": "陕西省西安市中心区示例路 104 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h76_1",
+          "name": "标准大床",
+          "price": 1019
+        },
+        {
+          "id": "r_h76_2",
+          "name": "高级双床",
+          "price": 1099
+        }
+      ],
+      "openTime": "2019-05-05",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "西安、设计师、免费停车、近地铁、泳池",
+      "images": [],
+      "createdAt": "2024-03-18T10:00:00.000Z",
+      "updatedAt": "2024-03-18T10:00:00.000Z"
+    },
+    {
+      "id": "h77",
+      "merchantId": "u1",
+      "nameZh": "易宿·西安亲子酒店 05号",
+      "nameEn": "Yisu 西安 Family Hotel #05",
+      "address": "陕西省西安市中心区示例路 105 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h77_1",
+          "name": "标准大床",
+          "price": 1839
+        },
+        {
+          "id": "r_h77_2",
+          "name": "高级双床",
+          "price": 1979
+        }
+      ],
+      "openTime": "2020-06-06",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "西安、亲子、健身房",
+      "images": [],
+      "createdAt": "2024-03-19T10:00:00.000Z",
+      "updatedAt": "2024-03-19T10:00:00.000Z"
+    },
+    {
+      "id": "h78",
+      "merchantId": "u1",
+      "nameZh": "易宿·西安快捷酒店 06号",
+      "nameEn": "Yisu 西安 Budget Hotel #06",
+      "address": "陕西省西安市中心区示例路 106 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h78_1",
+          "name": "标准大床",
+          "price": 99
+        },
+        {
+          "id": "r_h78_2",
+          "name": "高级双床",
+          "price": 299
+        }
+      ],
+      "openTime": "2021-07-07",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "西安、近地铁、免费停车、含早、豪华、宠物友好",
+      "images": [],
+      "createdAt": "2024-03-20T10:00:00.000Z",
+      "updatedAt": "2024-03-20T10:00:00.000Z"
+    },
+    {
+      "id": "h79",
+      "merchantId": "u1",
+      "nameZh": "易宿·西安精选酒店 07号",
+      "nameEn": "Yisu 西安 Select Hotel #07",
+      "address": "陕西省西安市中心区示例路 107 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h79_1",
+          "name": "标准大床",
+          "price": 349
+        },
+        {
+          "id": "r_h79_2",
+          "name": "高级双床",
+          "price": 609
+        }
+      ],
+      "openTime": "2022-08-01",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "西安、网红、温泉、无烟",
+      "images": [],
+      "createdAt": "2024-03-21T10:00:00.000Z",
+      "updatedAt": "2024-03-21T10:00:00.000Z"
+    },
+    {
+      "id": "h80",
+      "merchantId": "u1",
+      "nameZh": "易宿·西安商务酒店 08号",
+      "nameEn": "Yisu 西安 Business Hotel #08",
+      "address": "陕西省西安市中心区示例路 108 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h80_1",
+          "name": "标准大床",
+          "price": 469
+        },
+        {
+          "id": "r_h80_2",
+          "name": "高级双床",
+          "price": 549
+        }
+      ],
+      "openTime": "2023-09-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "西安、商务、免费停车、近地铁、海景、豪华",
+      "images": [],
+      "createdAt": "2024-03-22T10:00:00.000Z",
+      "updatedAt": "2024-03-22T10:00:00.000Z"
+    },
+    {
+      "id": "h81",
+      "merchantId": "u1",
+      "nameZh": "易宿·西安度假酒店 09号",
+      "nameEn": "Yisu 西安 Resort Hotel #09",
+      "address": "陕西省西安市中心区示例路 109 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h81_1",
+          "name": "标准大床",
+          "price": 619
+        },
+        {
+          "id": "r_h81_2",
+          "name": "高级双床",
+          "price": 759
+        }
+      ],
+      "openTime": "2024-01-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "西安、度假、含早、泳池、免费停车",
+      "images": [],
+      "createdAt": "2024-03-23T10:00:00.000Z",
+      "updatedAt": "2024-03-23T10:00:00.000Z"
+    },
+    {
+      "id": "h82",
+      "merchantId": "u1",
+      "nameZh": "易宿·西安设计师酒店 10号",
+      "nameEn": "Yisu 西安 Designer Hotel #10",
+      "address": "陕西省西安市中心区示例路 110 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h82_1",
+          "name": "标准大床",
+          "price": 819
+        },
+        {
+          "id": "r_h82_2",
+          "name": "高级双床",
+          "price": 1019
+        }
+      ],
+      "openTime": "2015-02-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "西安、设计师、免费停车、亲子、健身房、含早",
+      "images": [],
+      "createdAt": "2024-03-24T10:00:00.000Z",
+      "updatedAt": "2024-03-24T10:00:00.000Z"
+    },
+    {
+      "id": "h83",
+      "merchantId": "u1",
+      "nameZh": "易宿·西安亲子酒店 11号",
+      "nameEn": "Yisu 西安 Family Hotel #11",
+      "address": "陕西省西安市中心区示例路 111 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h83_1",
+          "name": "标准大床",
+          "price": 1239
+        },
+        {
+          "id": "r_h83_2",
+          "name": "高级双床",
+          "price": 1499
+        }
+      ],
+      "openTime": "2016-03-05",
+      "status": "pending",
+      "rejectReason": null,
+      "nearby": "西安、亲子、宠物友好、温泉",
+      "images": [],
+      "createdAt": "2024-03-25T10:00:00.000Z",
+      "updatedAt": "2024-03-25T10:00:00.000Z"
+    },
+    {
+      "id": "h84",
+      "merchantId": "u1",
+      "nameZh": "易宿·西安快捷酒店 12号",
+      "nameEn": "Yisu 西安 Budget Hotel #12",
+      "address": "陕西省西安市中心区示例路 112 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h84_1",
+          "name": "标准大床",
+          "price": 1659
+        },
+        {
+          "id": "r_h84_2",
+          "name": "高级双床",
+          "price": 1739
+        }
+      ],
+      "openTime": "2017-04-06",
+      "status": "rejected",
+      "rejectReason": "模拟：审核资料不全/图片不清晰",
+      "nearby": "西安、近地铁、免费停车、含早、豪华、无烟、海景",
+      "images": [],
+      "createdAt": "2024-03-26T10:00:00.000Z",
+      "updatedAt": "2024-03-26T10:00:00.000Z"
+    },
+    {
+      "id": "h85",
+      "merchantId": "u1",
+      "nameZh": "易宿·南京精选酒店 01号",
+      "nameEn": "Yisu 南京 Select Hotel #01",
+      "address": "江苏省南京市中心区示例路 101 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h85_1",
+          "name": "标准大床",
+          "price": 419
+        },
+        {
+          "id": "r_h85_2",
+          "name": "高级双床",
+          "price": 559
+        }
+      ],
+      "openTime": "2016-02-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "南京、网红、宠物友好",
+      "images": [],
+      "createdAt": "2024-03-27T10:00:00.000Z",
+      "updatedAt": "2024-03-27T10:00:00.000Z"
+    },
+    {
+      "id": "h86",
+      "merchantId": "u1",
+      "nameZh": "易宿·南京商务酒店 02号",
+      "nameEn": "Yisu 南京 Business Hotel #02",
+      "address": "江苏省南京市中心区示例路 102 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h86_1",
+          "name": "标准大床",
+          "price": 579
+        },
+        {
+          "id": "r_h86_2",
+          "name": "高级双床",
+          "price": 779
+        }
+      ],
+      "openTime": "2017-03-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "南京、商务、免费停车、无烟",
+      "images": [],
+      "createdAt": "2024-03-28T10:00:00.000Z",
+      "updatedAt": "2024-03-28T10:00:00.000Z"
+    },
+    {
+      "id": "h87",
+      "merchantId": "u1",
+      "nameZh": "易宿·南京度假酒店 03号",
+      "nameEn": "Yisu 南京 Resort Hotel #03",
+      "address": "江苏省南京市中心区示例路 103 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h87_1",
+          "name": "标准大床",
+          "price": 719
+        },
+        {
+          "id": "r_h87_2",
+          "name": "高级双床",
+          "price": 979
+        }
+      ],
+      "openTime": "2018-04-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "南京、度假、含早、豪华",
+      "images": [],
+      "createdAt": "2024-03-29T10:00:00.000Z",
+      "updatedAt": "2024-03-29T10:00:00.000Z"
+    },
+    {
+      "id": "h88",
+      "merchantId": "u1",
+      "nameZh": "易宿·南京设计师酒店 04号",
+      "nameEn": "Yisu 南京 Designer Hotel #04",
+      "address": "江苏省南京市中心区示例路 104 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h88_1",
+          "name": "标准大床",
+          "price": 1019
+        },
+        {
+          "id": "r_h88_2",
+          "name": "高级双床",
+          "price": 1099
+        }
+      ],
+      "openTime": "2019-05-05",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "南京、设计师、免费停车、近地铁",
+      "images": [],
+      "createdAt": "2024-03-30T10:00:00.000Z",
+      "updatedAt": "2024-03-30T10:00:00.000Z"
+    },
+    {
+      "id": "h89",
+      "merchantId": "u1",
+      "nameZh": "易宿·南京亲子酒店 05号",
+      "nameEn": "Yisu 南京 Family Hotel #05",
+      "address": "江苏省南京市中心区示例路 105 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h89_1",
+          "name": "标准大床",
+          "price": 1839
+        },
+        {
+          "id": "r_h89_2",
+          "name": "高级双床",
+          "price": 1979
+        }
+      ],
+      "openTime": "2020-06-06",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "南京、亲子、含早",
+      "images": [],
+      "createdAt": "2024-03-31T10:00:00.000Z",
+      "updatedAt": "2024-03-31T10:00:00.000Z"
+    },
+    {
+      "id": "h90",
+      "merchantId": "u1",
+      "nameZh": "易宿·南京快捷酒店 06号",
+      "nameEn": "Yisu 南京 Budget Hotel #06",
+      "address": "江苏省南京市中心区示例路 106 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h90_1",
+          "name": "标准大床",
+          "price": 99
+        },
+        {
+          "id": "r_h90_2",
+          "name": "高级双床",
+          "price": 299
+        }
+      ],
+      "openTime": "2021-07-07",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "南京、近地铁、免费停车、含早、豪华、温泉",
+      "images": [],
+      "createdAt": "2024-04-01T10:00:00.000Z",
+      "updatedAt": "2024-04-01T10:00:00.000Z"
+    },
+    {
+      "id": "h91",
+      "merchantId": "u1",
+      "nameZh": "易宿·南京精选酒店 07号",
+      "nameEn": "Yisu 南京 Select Hotel #07",
+      "address": "江苏省南京市中心区示例路 107 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h91_1",
+          "name": "标准大床",
+          "price": 349
+        },
+        {
+          "id": "r_h91_2",
+          "name": "高级双床",
+          "price": 609
+        }
+      ],
+      "openTime": "2022-08-01",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "南京、网红、温泉、海景",
+      "images": [],
+      "createdAt": "2024-04-02T10:00:00.000Z",
+      "updatedAt": "2024-04-02T10:00:00.000Z"
+    },
+    {
+      "id": "h92",
+      "merchantId": "u1",
+      "nameZh": "易宿·南京商务酒店 08号",
+      "nameEn": "Yisu 南京 Business Hotel #08",
+      "address": "江苏省南京市中心区示例路 108 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h92_1",
+          "name": "标准大床",
+          "price": 469
+        },
+        {
+          "id": "r_h92_2",
+          "name": "高级双床",
+          "price": 549
+        }
+      ],
+      "openTime": "2023-09-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "南京、商务、免费停车、近地铁、海景、泳池",
+      "images": [],
+      "createdAt": "2024-04-03T10:00:00.000Z",
+      "updatedAt": "2024-04-03T10:00:00.000Z"
+    },
+    {
+      "id": "h93",
+      "merchantId": "u1",
+      "nameZh": "易宿·南京度假酒店 09号",
+      "nameEn": "Yisu 南京 Resort Hotel #09",
+      "address": "江苏省南京市中心区示例路 109 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h93_1",
+          "name": "标准大床",
+          "price": 619
+        },
+        {
+          "id": "r_h93_2",
+          "name": "高级双床",
+          "price": 759
+        }
+      ],
+      "openTime": "2024-01-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "南京、度假、含早、泳池、健身房",
+      "images": [],
+      "createdAt": "2024-04-04T10:00:00.000Z",
+      "updatedAt": "2024-04-04T10:00:00.000Z"
+    },
+    {
+      "id": "h94",
+      "merchantId": "u1",
+      "nameZh": "易宿·南京设计师酒店 10号",
+      "nameEn": "Yisu 南京 Designer Hotel #10",
+      "address": "江苏省南京市中心区示例路 110 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h94_1",
+          "name": "标准大床",
+          "price": 819
+        },
+        {
+          "id": "r_h94_2",
+          "name": "高级双床",
+          "price": 1019
+        }
+      ],
+      "openTime": "2015-02-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "南京、设计师、免费停车、亲子、健身房、宠物友好",
+      "images": [],
+      "createdAt": "2024-04-05T10:00:00.000Z",
+      "updatedAt": "2024-04-05T10:00:00.000Z"
+    },
+    {
+      "id": "h95",
+      "merchantId": "u1",
+      "nameZh": "易宿·南京亲子酒店 11号",
+      "nameEn": "Yisu 南京 Family Hotel #11",
+      "address": "江苏省南京市中心区示例路 111 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h95_1",
+          "name": "标准大床",
+          "price": 1239
+        },
+        {
+          "id": "r_h95_2",
+          "name": "高级双床",
+          "price": 1499
+        }
+      ],
+      "openTime": "2016-03-05",
+      "status": "pending",
+      "rejectReason": null,
+      "nearby": "南京、亲子、宠物友好、无烟",
+      "images": [],
+      "createdAt": "2024-04-06T10:00:00.000Z",
+      "updatedAt": "2024-04-06T10:00:00.000Z"
+    },
+    {
+      "id": "h96",
+      "merchantId": "u1",
+      "nameZh": "易宿·南京快捷酒店 12号",
+      "nameEn": "Yisu 南京 Budget Hotel #12",
+      "address": "江苏省南京市中心区示例路 112 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h96_1",
+          "name": "标准大床",
+          "price": 1659
+        },
+        {
+          "id": "r_h96_2",
+          "name": "高级双床",
+          "price": 1739
+        }
+      ],
+      "openTime": "2017-04-06",
+      "status": "rejected",
+      "rejectReason": "模拟：审核资料不全/图片不清晰",
+      "nearby": "南京、近地铁、免费停车、含早、豪华、无烟",
+      "images": [],
+      "createdAt": "2024-04-07T10:00:00.000Z",
+      "updatedAt": "2024-04-07T10:00:00.000Z"
+    },
+    {
+      "id": "h97",
+      "merchantId": "u1",
+      "nameZh": "易宿·苏州精选酒店 01号",
+      "nameEn": "Yisu 苏州 Select Hotel #01",
+      "address": "江苏省苏州市中心区示例路 101 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h97_1",
+          "name": "标准大床",
+          "price": 419
+        },
+        {
+          "id": "r_h97_2",
+          "name": "高级双床",
+          "price": 559
+        }
+      ],
+      "openTime": "2016-02-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "苏州、网红、豪华",
+      "images": [],
+      "createdAt": "2024-04-08T10:00:00.000Z",
+      "updatedAt": "2024-04-08T10:00:00.000Z"
+    },
+    {
+      "id": "h98",
+      "merchantId": "u1",
+      "nameZh": "易宿·苏州商务酒店 02号",
+      "nameEn": "Yisu 苏州 Business Hotel #02",
+      "address": "江苏省苏州市中心区示例路 102 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h98_1",
+          "name": "标准大床",
+          "price": 579
+        },
+        {
+          "id": "r_h98_2",
+          "name": "高级双床",
+          "price": 779
+        }
+      ],
+      "openTime": "2017-03-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "苏州、商务、免费停车",
+      "images": [],
+      "createdAt": "2024-04-09T10:00:00.000Z",
+      "updatedAt": "2024-04-09T10:00:00.000Z"
+    },
+    {
+      "id": "h99",
+      "merchantId": "u1",
+      "nameZh": "易宿·苏州度假酒店 03号",
+      "nameEn": "Yisu 苏州 Resort Hotel #03",
+      "address": "江苏省苏州市中心区示例路 103 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h99_1",
+          "name": "标准大床",
+          "price": 719
+        },
+        {
+          "id": "r_h99_2",
+          "name": "高级双床",
+          "price": 979
+        }
+      ],
+      "openTime": "2018-04-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "苏州、度假、含早",
+      "images": [],
+      "createdAt": "2024-04-10T10:00:00.000Z",
+      "updatedAt": "2024-04-10T10:00:00.000Z"
+    },
+    {
+      "id": "h100",
+      "merchantId": "u1",
+      "nameZh": "易宿·苏州设计师酒店 04号",
+      "nameEn": "Yisu 苏州 Designer Hotel #04",
+      "address": "江苏省苏州市中心区示例路 104 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h100_1",
+          "name": "标准大床",
+          "price": 1019
+        },
+        {
+          "id": "r_h100_2",
+          "name": "高级双床",
+          "price": 1099
+        }
+      ],
+      "openTime": "2019-05-05",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "苏州、设计师、免费停车、近地铁、温泉",
+      "images": [],
+      "createdAt": "2024-04-11T10:00:00.000Z",
+      "updatedAt": "2024-04-11T10:00:00.000Z"
+    },
+    {
+      "id": "h101",
+      "merchantId": "u1",
+      "nameZh": "易宿·苏州亲子酒店 05号",
+      "nameEn": "Yisu 苏州 Family Hotel #05",
+      "address": "江苏省苏州市中心区示例路 105 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h101_1",
+          "name": "标准大床",
+          "price": 1839
+        },
+        {
+          "id": "r_h101_2",
+          "name": "高级双床",
+          "price": 1979
+        }
+      ],
+      "openTime": "2020-06-06",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "苏州、亲子、海景",
+      "images": [],
+      "createdAt": "2024-04-12T10:00:00.000Z",
+      "updatedAt": "2024-04-12T10:00:00.000Z"
+    },
+    {
+      "id": "h102",
+      "merchantId": "u1",
+      "nameZh": "易宿·苏州快捷酒店 06号",
+      "nameEn": "Yisu 苏州 Budget Hotel #06",
+      "address": "江苏省苏州市中心区示例路 106 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h102_1",
+          "name": "标准大床",
+          "price": 99
+        },
+        {
+          "id": "r_h102_2",
+          "name": "高级双床",
+          "price": 299
+        }
+      ],
+      "openTime": "2021-07-07",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "苏州、近地铁、免费停车、含早、豪华、泳池",
+      "images": [],
+      "createdAt": "2024-04-13T10:00:00.000Z",
+      "updatedAt": "2024-04-13T10:00:00.000Z"
+    },
+    {
+      "id": "h103",
+      "merchantId": "u1",
+      "nameZh": "易宿·苏州精选酒店 07号",
+      "nameEn": "Yisu 苏州 Select Hotel #07",
+      "address": "江苏省苏州市中心区示例路 107 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h103_1",
+          "name": "标准大床",
+          "price": 349
+        },
+        {
+          "id": "r_h103_2",
+          "name": "高级双床",
+          "price": 609
+        }
+      ],
+      "openTime": "2022-08-01",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "苏州、网红、温泉、健身房",
+      "images": [],
+      "createdAt": "2024-04-14T10:00:00.000Z",
+      "updatedAt": "2024-04-14T10:00:00.000Z"
+    },
+    {
+      "id": "h104",
+      "merchantId": "u1",
+      "nameZh": "易宿·苏州商务酒店 08号",
+      "nameEn": "Yisu 苏州 Business Hotel #08",
+      "address": "江苏省苏州市中心区示例路 108 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h104_1",
+          "name": "标准大床",
+          "price": 469
+        },
+        {
+          "id": "r_h104_2",
+          "name": "高级双床",
+          "price": 549
+        }
+      ],
+      "openTime": "2023-09-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "苏州、商务、免费停车、近地铁、海景、宠物友好",
+      "images": [],
+      "createdAt": "2024-04-15T10:00:00.000Z",
+      "updatedAt": "2024-04-15T10:00:00.000Z"
+    },
+    {
+      "id": "h105",
+      "merchantId": "u1",
+      "nameZh": "易宿·苏州度假酒店 09号",
+      "nameEn": "Yisu 苏州 Resort Hotel #09",
+      "address": "江苏省苏州市中心区示例路 109 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h105_1",
+          "name": "标准大床",
+          "price": 619
+        },
+        {
+          "id": "r_h105_2",
+          "name": "高级双床",
+          "price": 759
+        }
+      ],
+      "openTime": "2024-01-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "苏州、度假、含早、泳池、无烟",
+      "images": [],
+      "createdAt": "2024-04-16T10:00:00.000Z",
+      "updatedAt": "2024-04-16T10:00:00.000Z"
+    },
+    {
+      "id": "h106",
+      "merchantId": "u1",
+      "nameZh": "易宿·苏州设计师酒店 10号",
+      "nameEn": "Yisu 苏州 Designer Hotel #10",
+      "address": "江苏省苏州市中心区示例路 110 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h106_1",
+          "name": "标准大床",
+          "price": 819
+        },
+        {
+          "id": "r_h106_2",
+          "name": "高级双床",
+          "price": 1019
+        }
+      ],
+      "openTime": "2015-02-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "苏州、设计师、免费停车、亲子、健身房、豪华",
+      "images": [],
+      "createdAt": "2024-04-17T10:00:00.000Z",
+      "updatedAt": "2024-04-17T10:00:00.000Z"
+    },
+    {
+      "id": "h107",
+      "merchantId": "u1",
+      "nameZh": "易宿·苏州亲子酒店 11号",
+      "nameEn": "Yisu 苏州 Family Hotel #11",
+      "address": "江苏省苏州市中心区示例路 111 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h107_1",
+          "name": "标准大床",
+          "price": 1239
+        },
+        {
+          "id": "r_h107_2",
+          "name": "高级双床",
+          "price": 1499
+        }
+      ],
+      "openTime": "2016-03-05",
+      "status": "pending",
+      "rejectReason": null,
+      "nearby": "苏州、亲子、宠物友好、免费停车",
+      "images": [],
+      "createdAt": "2024-04-18T10:00:00.000Z",
+      "updatedAt": "2024-04-18T10:00:00.000Z"
+    },
+    {
+      "id": "h108",
+      "merchantId": "u1",
+      "nameZh": "易宿·苏州快捷酒店 12号",
+      "nameEn": "Yisu 苏州 Budget Hotel #12",
+      "address": "江苏省苏州市中心区示例路 112 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h108_1",
+          "name": "标准大床",
+          "price": 1659
+        },
+        {
+          "id": "r_h108_2",
+          "name": "高级双床",
+          "price": 1739
+        }
+      ],
+      "openTime": "2017-04-06",
+      "status": "rejected",
+      "rejectReason": "模拟：审核资料不全/图片不清晰",
+      "nearby": "苏州、近地铁、免费停车、含早、豪华、无烟",
+      "images": [],
+      "createdAt": "2024-04-19T10:00:00.000Z",
+      "updatedAt": "2024-04-19T10:00:00.000Z"
+    },
+    {
+      "id": "h109",
+      "merchantId": "u1",
+      "nameZh": "易宿·厦门精选酒店 01号",
+      "nameEn": "Yisu 厦门 Select Hotel #01",
+      "address": "福建省厦门市中心区示例路 101 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h109_1",
+          "name": "标准大床",
+          "price": 419
+        },
+        {
+          "id": "r_h109_2",
+          "name": "高级双床",
+          "price": 559
+        }
+      ],
+      "openTime": "2016-02-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "厦门、网红、泳池",
+      "images": [],
+      "createdAt": "2024-04-20T10:00:00.000Z",
+      "updatedAt": "2024-04-20T10:00:00.000Z"
+    },
+    {
+      "id": "h110",
+      "merchantId": "u1",
+      "nameZh": "易宿·厦门商务酒店 02号",
+      "nameEn": "Yisu 厦门 Business Hotel #02",
+      "address": "福建省厦门市中心区示例路 102 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h110_1",
+          "name": "标准大床",
+          "price": 579
+        },
+        {
+          "id": "r_h110_2",
+          "name": "高级双床",
+          "price": 779
+        }
+      ],
+      "openTime": "2017-03-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "厦门、商务、免费停车、健身房",
+      "images": [],
+      "createdAt": "2024-04-21T10:00:00.000Z",
+      "updatedAt": "2024-04-21T10:00:00.000Z"
+    },
+    {
+      "id": "h111",
+      "merchantId": "u1",
+      "nameZh": "易宿·厦门度假酒店 03号",
+      "nameEn": "Yisu 厦门 Resort Hotel #03",
+      "address": "福建省厦门市中心区示例路 103 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h111_1",
+          "name": "标准大床",
+          "price": 719
+        },
+        {
+          "id": "r_h111_2",
+          "name": "高级双床",
+          "price": 979
+        }
+      ],
+      "openTime": "2018-04-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "厦门、度假、含早、宠物友好",
+      "images": [],
+      "createdAt": "2024-04-22T10:00:00.000Z",
+      "updatedAt": "2024-04-22T10:00:00.000Z"
+    },
+    {
+      "id": "h112",
+      "merchantId": "u1",
+      "nameZh": "易宿·厦门设计师酒店 04号",
+      "nameEn": "Yisu 厦门 Designer Hotel #04",
+      "address": "福建省厦门市中心区示例路 104 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h112_1",
+          "name": "标准大床",
+          "price": 1019
+        },
+        {
+          "id": "r_h112_2",
+          "name": "高级双床",
+          "price": 1099
+        }
+      ],
+      "openTime": "2019-05-05",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "厦门、设计师、免费停车、近地铁、无烟",
+      "images": [],
+      "createdAt": "2024-04-23T10:00:00.000Z",
+      "updatedAt": "2024-04-23T10:00:00.000Z"
+    },
+    {
+      "id": "h113",
+      "merchantId": "u1",
+      "nameZh": "易宿·厦门亲子酒店 05号",
+      "nameEn": "Yisu 厦门 Family Hotel #05",
+      "address": "福建省厦门市中心区示例路 105 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h113_1",
+          "name": "标准大床",
+          "price": 1839
+        },
+        {
+          "id": "r_h113_2",
+          "name": "高级双床",
+          "price": 1979
+        }
+      ],
+      "openTime": "2020-06-06",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "厦门、亲子、豪华",
+      "images": [],
+      "createdAt": "2024-04-24T10:00:00.000Z",
+      "updatedAt": "2024-04-24T10:00:00.000Z"
+    },
+    {
+      "id": "h114",
+      "merchantId": "u1",
+      "nameZh": "易宿·厦门快捷酒店 06号",
+      "nameEn": "Yisu 厦门 Budget Hotel #06",
+      "address": "福建省厦门市中心区示例路 106 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h114_1",
+          "name": "标准大床",
+          "price": 99
+        },
+        {
+          "id": "r_h114_2",
+          "name": "高级双床",
+          "price": 299
+        }
+      ],
+      "openTime": "2021-07-07",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "厦门、近地铁、免费停车、含早、豪华",
+      "images": [],
+      "createdAt": "2024-04-25T10:00:00.000Z",
+      "updatedAt": "2024-04-25T10:00:00.000Z"
+    },
+    {
+      "id": "h115",
+      "merchantId": "u1",
+      "nameZh": "易宿·厦门精选酒店 07号",
+      "nameEn": "Yisu 厦门 Select Hotel #07",
+      "address": "福建省厦门市中心区示例路 107 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h115_1",
+          "name": "标准大床",
+          "price": 349
+        },
+        {
+          "id": "r_h115_2",
+          "name": "高级双床",
+          "price": 609
+        }
+      ],
+      "openTime": "2022-08-01",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "厦门、网红、温泉、含早",
+      "images": [],
+      "createdAt": "2024-04-26T10:00:00.000Z",
+      "updatedAt": "2024-04-26T10:00:00.000Z"
+    },
+    {
+      "id": "h116",
+      "merchantId": "u1",
+      "nameZh": "易宿·厦门商务酒店 08号",
+      "nameEn": "Yisu 厦门 Business Hotel #08",
+      "address": "福建省厦门市中心区示例路 108 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h116_1",
+          "name": "标准大床",
+          "price": 469
+        },
+        {
+          "id": "r_h116_2",
+          "name": "高级双床",
+          "price": 549
+        }
+      ],
+      "openTime": "2023-09-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "厦门、商务、免费停车、近地铁、海景、温泉",
+      "images": [],
+      "createdAt": "2024-04-27T10:00:00.000Z",
+      "updatedAt": "2024-04-27T10:00:00.000Z"
+    },
+    {
+      "id": "h117",
+      "merchantId": "u1",
+      "nameZh": "易宿·厦门度假酒店 09号",
+      "nameEn": "Yisu 厦门 Resort Hotel #09",
+      "address": "福建省厦门市中心区示例路 109 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h117_1",
+          "name": "标准大床",
+          "price": 619
+        },
+        {
+          "id": "r_h117_2",
+          "name": "高级双床",
+          "price": 759
+        }
+      ],
+      "openTime": "2024-01-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "厦门、度假、含早、泳池、海景",
+      "images": [],
+      "createdAt": "2024-04-28T10:00:00.000Z",
+      "updatedAt": "2024-04-28T10:00:00.000Z"
+    },
+    {
+      "id": "h118",
+      "merchantId": "u1",
+      "nameZh": "易宿·厦门设计师酒店 10号",
+      "nameEn": "Yisu 厦门 Designer Hotel #10",
+      "address": "福建省厦门市中心区示例路 110 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h118_1",
+          "name": "标准大床",
+          "price": 819
+        },
+        {
+          "id": "r_h118_2",
+          "name": "高级双床",
+          "price": 1019
+        }
+      ],
+      "openTime": "2015-02-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "厦门、设计师、免费停车、亲子、健身房、泳池",
+      "images": [],
+      "createdAt": "2024-04-29T10:00:00.000Z",
+      "updatedAt": "2024-04-29T10:00:00.000Z"
+    },
+    {
+      "id": "h119",
+      "merchantId": "u1",
+      "nameZh": "易宿·厦门亲子酒店 11号",
+      "nameEn": "Yisu 厦门 Family Hotel #11",
+      "address": "福建省厦门市中心区示例路 111 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h119_1",
+          "name": "标准大床",
+          "price": 1239
+        },
+        {
+          "id": "r_h119_2",
+          "name": "高级双床",
+          "price": 1499
+        }
+      ],
+      "openTime": "2016-03-05",
+      "status": "pending",
+      "rejectReason": null,
+      "nearby": "厦门、亲子、宠物友好、健身房",
+      "images": [],
+      "createdAt": "2024-04-30T10:00:00.000Z",
+      "updatedAt": "2024-04-30T10:00:00.000Z"
+    },
+    {
+      "id": "h120",
+      "merchantId": "u1",
+      "nameZh": "易宿·厦门快捷酒店 12号",
+      "nameEn": "Yisu 厦门 Budget Hotel #12",
+      "address": "福建省厦门市中心区示例路 112 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h120_1",
+          "name": "标准大床",
+          "price": 1659
+        },
+        {
+          "id": "r_h120_2",
+          "name": "高级双床",
+          "price": 1739
+        }
+      ],
+      "openTime": "2017-04-06",
+      "status": "rejected",
+      "rejectReason": "模拟：审核资料不全/图片不清晰",
+      "nearby": "厦门、近地铁、免费停车、含早、豪华、无烟、宠物友好",
+      "images": [],
+      "createdAt": "2024-05-01T10:00:00.000Z",
+      "updatedAt": "2024-05-01T10:00:00.000Z"
+    },
+    {
+      "id": "h121",
+      "merchantId": "u1",
+      "nameZh": "易宿·三亚精选酒店 01号",
+      "nameEn": "Yisu 三亚 Select Hotel #01",
+      "address": "海南省三亚市中心区示例路 101 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h121_1",
+          "name": "标准大床",
+          "price": 419
+        },
+        {
+          "id": "r_h121_2",
+          "name": "高级双床",
+          "price": 559
+        }
+      ],
+      "openTime": "2016-02-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "三亚、网红、无烟",
+      "images": [],
+      "createdAt": "2024-05-02T10:00:00.000Z",
+      "updatedAt": "2024-05-02T10:00:00.000Z"
+    },
+    {
+      "id": "h122",
+      "merchantId": "u1",
+      "nameZh": "易宿·三亚商务酒店 02号",
+      "nameEn": "Yisu 三亚 Business Hotel #02",
+      "address": "海南省三亚市中心区示例路 102 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h122_1",
+          "name": "标准大床",
+          "price": 579
+        },
+        {
+          "id": "r_h122_2",
+          "name": "高级双床",
+          "price": 779
+        }
+      ],
+      "openTime": "2017-03-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "三亚、商务、免费停车、豪华",
+      "images": [],
+      "createdAt": "2024-05-03T10:00:00.000Z",
+      "updatedAt": "2024-05-03T10:00:00.000Z"
+    },
+    {
+      "id": "h123",
+      "merchantId": "u1",
+      "nameZh": "易宿·三亚度假酒店 03号",
+      "nameEn": "Yisu 三亚 Resort Hotel #03",
+      "address": "海南省三亚市中心区示例路 103 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h123_1",
+          "name": "标准大床",
+          "price": 719
+        },
+        {
+          "id": "r_h123_2",
+          "name": "高级双床",
+          "price": 979
+        }
+      ],
+      "openTime": "2018-04-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "三亚、度假、含早、免费停车",
+      "images": [],
+      "createdAt": "2024-05-04T10:00:00.000Z",
+      "updatedAt": "2024-05-04T10:00:00.000Z"
+    },
+    {
+      "id": "h124",
+      "merchantId": "u1",
+      "nameZh": "易宿·三亚设计师酒店 04号",
+      "nameEn": "Yisu 三亚 Designer Hotel #04",
+      "address": "海南省三亚市中心区示例路 104 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h124_1",
+          "name": "标准大床",
+          "price": 1019
+        },
+        {
+          "id": "r_h124_2",
+          "name": "高级双床",
+          "price": 1099
+        }
+      ],
+      "openTime": "2019-05-05",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "三亚、设计师、免费停车、近地铁、含早",
+      "images": [],
+      "createdAt": "2024-05-05T10:00:00.000Z",
+      "updatedAt": "2024-05-05T10:00:00.000Z"
+    },
+    {
+      "id": "h125",
+      "merchantId": "u1",
+      "nameZh": "易宿·三亚亲子酒店 05号",
+      "nameEn": "Yisu 三亚 Family Hotel #05",
+      "address": "海南省三亚市中心区示例路 105 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h125_1",
+          "name": "标准大床",
+          "price": 1839
+        },
+        {
+          "id": "r_h125_2",
+          "name": "高级双床",
+          "price": 1979
+        }
+      ],
+      "openTime": "2020-06-06",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "三亚、亲子、温泉",
+      "images": [],
+      "createdAt": "2024-05-06T10:00:00.000Z",
+      "updatedAt": "2024-05-06T10:00:00.000Z"
+    },
+    {
+      "id": "h126",
+      "merchantId": "u1",
+      "nameZh": "易宿·三亚快捷酒店 06号",
+      "nameEn": "Yisu 三亚 Budget Hotel #06",
+      "address": "海南省三亚市中心区示例路 106 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h126_1",
+          "name": "标准大床",
+          "price": 99
+        },
+        {
+          "id": "r_h126_2",
+          "name": "高级双床",
+          "price": 299
+        }
+      ],
+      "openTime": "2021-07-07",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "三亚、近地铁、免费停车、含早、豪华、海景",
+      "images": [],
+      "createdAt": "2024-05-07T10:00:00.000Z",
+      "updatedAt": "2024-05-07T10:00:00.000Z"
+    },
+    {
+      "id": "h127",
+      "merchantId": "u1",
+      "nameZh": "易宿·三亚精选酒店 07号",
+      "nameEn": "Yisu 三亚 Select Hotel #07",
+      "address": "海南省三亚市中心区示例路 107 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h127_1",
+          "name": "标准大床",
+          "price": 349
+        },
+        {
+          "id": "r_h127_2",
+          "name": "高级双床",
+          "price": 609
+        }
+      ],
+      "openTime": "2022-08-01",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "三亚、网红、温泉、泳池",
+      "images": [],
+      "createdAt": "2024-05-08T10:00:00.000Z",
+      "updatedAt": "2024-05-08T10:00:00.000Z"
+    },
+    {
+      "id": "h128",
+      "merchantId": "u1",
+      "nameZh": "易宿·三亚商务酒店 08号",
+      "nameEn": "Yisu 三亚 Business Hotel #08",
+      "address": "海南省三亚市中心区示例路 108 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h128_1",
+          "name": "标准大床",
+          "price": 469
+        },
+        {
+          "id": "r_h128_2",
+          "name": "高级双床",
+          "price": 549
+        }
+      ],
+      "openTime": "2023-09-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "三亚、商务、免费停车、近地铁、海景、健身房",
+      "images": [],
+      "createdAt": "2024-05-09T10:00:00.000Z",
+      "updatedAt": "2024-05-09T10:00:00.000Z"
+    },
+    {
+      "id": "h129",
+      "merchantId": "u1",
+      "nameZh": "易宿·三亚度假酒店 09号",
+      "nameEn": "Yisu 三亚 Resort Hotel #09",
+      "address": "海南省三亚市中心区示例路 109 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h129_1",
+          "name": "标准大床",
+          "price": 619
+        },
+        {
+          "id": "r_h129_2",
+          "name": "高级双床",
+          "price": 759
+        }
+      ],
+      "openTime": "2024-01-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "三亚、度假、含早、泳池、宠物友好",
+      "images": [],
+      "createdAt": "2024-05-10T10:00:00.000Z",
+      "updatedAt": "2024-05-10T10:00:00.000Z"
+    },
+    {
+      "id": "h130",
+      "merchantId": "u1",
+      "nameZh": "易宿·三亚设计师酒店 10号",
+      "nameEn": "Yisu 三亚 Designer Hotel #10",
+      "address": "海南省三亚市中心区示例路 110 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h130_1",
+          "name": "标准大床",
+          "price": 819
+        },
+        {
+          "id": "r_h130_2",
+          "name": "高级双床",
+          "price": 1019
+        }
+      ],
+      "openTime": "2015-02-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "三亚、设计师、免费停车、亲子、健身房、无烟",
+      "images": [],
+      "createdAt": "2024-05-11T10:00:00.000Z",
+      "updatedAt": "2024-05-11T10:00:00.000Z"
+    },
+    {
+      "id": "h131",
+      "merchantId": "u1",
+      "nameZh": "易宿·三亚亲子酒店 11号",
+      "nameEn": "Yisu 三亚 Family Hotel #11",
+      "address": "海南省三亚市中心区示例路 111 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h131_1",
+          "name": "标准大床",
+          "price": 1239
+        },
+        {
+          "id": "r_h131_2",
+          "name": "高级双床",
+          "price": 1499
+        }
+      ],
+      "openTime": "2016-03-05",
+      "status": "pending",
+      "rejectReason": null,
+      "nearby": "三亚、亲子、宠物友好、豪华",
+      "images": [],
+      "createdAt": "2024-05-12T10:00:00.000Z",
+      "updatedAt": "2024-05-12T10:00:00.000Z"
+    },
+    {
+      "id": "h132",
+      "merchantId": "u1",
+      "nameZh": "易宿·三亚快捷酒店 12号",
+      "nameEn": "Yisu 三亚 Budget Hotel #12",
+      "address": "海南省三亚市中心区示例路 112 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h132_1",
+          "name": "标准大床",
+          "price": 1659
+        },
+        {
+          "id": "r_h132_2",
+          "name": "高级双床",
+          "price": 1739
+        }
+      ],
+      "openTime": "2017-04-06",
+      "status": "rejected",
+      "rejectReason": "模拟：审核资料不全/图片不清晰",
+      "nearby": "三亚、近地铁、免费停车、含早、豪华、无烟",
+      "images": [],
+      "createdAt": "2024-05-13T10:00:00.000Z",
+      "updatedAt": "2024-05-13T10:00:00.000Z"
+    },
+    {
+      "id": "h133",
+      "merchantId": "u1",
+      "nameZh": "易宿·青岛精选酒店 01号",
+      "nameEn": "Yisu 青岛 Select Hotel #01",
+      "address": "山东省青岛市中心区示例路 101 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h133_1",
+          "name": "标准大床",
+          "price": 419
+        },
+        {
+          "id": "r_h133_2",
+          "name": "高级双床",
+          "price": 559
+        }
+      ],
+      "openTime": "2016-02-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "青岛、网红、海景",
+      "images": [],
+      "createdAt": "2024-05-14T10:00:00.000Z",
+      "updatedAt": "2024-05-14T10:00:00.000Z"
+    },
+    {
+      "id": "h134",
+      "merchantId": "u1",
+      "nameZh": "易宿·青岛商务酒店 02号",
+      "nameEn": "Yisu 青岛 Business Hotel #02",
+      "address": "山东省青岛市中心区示例路 102 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h134_1",
+          "name": "标准大床",
+          "price": 579
+        },
+        {
+          "id": "r_h134_2",
+          "name": "高级双床",
+          "price": 779
+        }
+      ],
+      "openTime": "2017-03-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "青岛、商务、免费停车、泳池",
+      "images": [],
+      "createdAt": "2024-05-15T10:00:00.000Z",
+      "updatedAt": "2024-05-15T10:00:00.000Z"
+    },
+    {
+      "id": "h135",
+      "merchantId": "u1",
+      "nameZh": "易宿·青岛度假酒店 03号",
+      "nameEn": "Yisu 青岛 Resort Hotel #03",
+      "address": "山东省青岛市中心区示例路 103 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h135_1",
+          "name": "标准大床",
+          "price": 719
+        },
+        {
+          "id": "r_h135_2",
+          "name": "高级双床",
+          "price": 979
+        }
+      ],
+      "openTime": "2018-04-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "青岛、度假、含早、健身房",
+      "images": [],
+      "createdAt": "2024-05-16T10:00:00.000Z",
+      "updatedAt": "2024-05-16T10:00:00.000Z"
+    },
+    {
+      "id": "h136",
+      "merchantId": "u1",
+      "nameZh": "易宿·青岛设计师酒店 04号",
+      "nameEn": "Yisu 青岛 Designer Hotel #04",
+      "address": "山东省青岛市中心区示例路 104 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h136_1",
+          "name": "标准大床",
+          "price": 1019
+        },
+        {
+          "id": "r_h136_2",
+          "name": "高级双床",
+          "price": 1099
+        }
+      ],
+      "openTime": "2019-05-05",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "青岛、设计师、免费停车、近地铁、宠物友好",
+      "images": [],
+      "createdAt": "2024-05-17T10:00:00.000Z",
+      "updatedAt": "2024-05-17T10:00:00.000Z"
+    },
+    {
+      "id": "h137",
+      "merchantId": "u1",
+      "nameZh": "易宿·青岛亲子酒店 05号",
+      "nameEn": "Yisu 青岛 Family Hotel #05",
+      "address": "山东省青岛市中心区示例路 105 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h137_1",
+          "name": "标准大床",
+          "price": 1839
+        },
+        {
+          "id": "r_h137_2",
+          "name": "高级双床",
+          "price": 1979
+        }
+      ],
+      "openTime": "2020-06-06",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "青岛、亲子、无烟",
+      "images": [],
+      "createdAt": "2024-05-18T10:00:00.000Z",
+      "updatedAt": "2024-05-18T10:00:00.000Z"
+    },
+    {
+      "id": "h138",
+      "merchantId": "u1",
+      "nameZh": "易宿·青岛快捷酒店 06号",
+      "nameEn": "Yisu 青岛 Budget Hotel #06",
+      "address": "山东省青岛市中心区示例路 106 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h138_1",
+          "name": "标准大床",
+          "price": 99
+        },
+        {
+          "id": "r_h138_2",
+          "name": "高级双床",
+          "price": 299
+        }
+      ],
+      "openTime": "2021-07-07",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "青岛、近地铁、免费停车、含早、豪华",
+      "images": [],
+      "createdAt": "2024-05-19T10:00:00.000Z",
+      "updatedAt": "2024-05-19T10:00:00.000Z"
+    },
+    {
+      "id": "h139",
+      "merchantId": "u1",
+      "nameZh": "易宿·青岛精选酒店 07号",
+      "nameEn": "Yisu 青岛 Select Hotel #07",
+      "address": "山东省青岛市中心区示例路 107 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h139_1",
+          "name": "标准大床",
+          "price": 349
+        },
+        {
+          "id": "r_h139_2",
+          "name": "高级双床",
+          "price": 609
+        }
+      ],
+      "openTime": "2022-08-01",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "青岛、网红、温泉、免费停车",
+      "images": [],
+      "createdAt": "2024-05-20T10:00:00.000Z",
+      "updatedAt": "2024-05-20T10:00:00.000Z"
+    },
+    {
+      "id": "h140",
+      "merchantId": "u1",
+      "nameZh": "易宿·青岛商务酒店 08号",
+      "nameEn": "Yisu 青岛 Business Hotel #08",
+      "address": "山东省青岛市中心区示例路 108 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h140_1",
+          "name": "标准大床",
+          "price": 469
+        },
+        {
+          "id": "r_h140_2",
+          "name": "高级双床",
+          "price": 549
+        }
+      ],
+      "openTime": "2023-09-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "青岛、商务、免费停车、近地铁、海景、含早",
+      "images": [],
+      "createdAt": "2024-05-21T10:00:00.000Z",
+      "updatedAt": "2024-05-21T10:00:00.000Z"
+    },
+    {
+      "id": "h141",
+      "merchantId": "u1",
+      "nameZh": "易宿·青岛度假酒店 09号",
+      "nameEn": "Yisu 青岛 Resort Hotel #09",
+      "address": "山东省青岛市中心区示例路 109 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h141_1",
+          "name": "标准大床",
+          "price": 619
+        },
+        {
+          "id": "r_h141_2",
+          "name": "高级双床",
+          "price": 759
+        }
+      ],
+      "openTime": "2024-01-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "青岛、度假、含早、泳池、温泉",
+      "images": [],
+      "createdAt": "2024-05-22T10:00:00.000Z",
+      "updatedAt": "2024-05-22T10:00:00.000Z"
+    },
+    {
+      "id": "h142",
+      "merchantId": "u1",
+      "nameZh": "易宿·青岛设计师酒店 10号",
+      "nameEn": "Yisu 青岛 Designer Hotel #10",
+      "address": "山东省青岛市中心区示例路 110 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h142_1",
+          "name": "标准大床",
+          "price": 819
+        },
+        {
+          "id": "r_h142_2",
+          "name": "高级双床",
+          "price": 1019
+        }
+      ],
+      "openTime": "2015-02-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "青岛、设计师、免费停车、亲子、健身房、海景",
+      "images": [],
+      "createdAt": "2024-05-23T10:00:00.000Z",
+      "updatedAt": "2024-05-23T10:00:00.000Z"
+    },
+    {
+      "id": "h143",
+      "merchantId": "u1",
+      "nameZh": "易宿·青岛亲子酒店 11号",
+      "nameEn": "Yisu 青岛 Family Hotel #11",
+      "address": "山东省青岛市中心区示例路 111 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h143_1",
+          "name": "标准大床",
+          "price": 1239
+        },
+        {
+          "id": "r_h143_2",
+          "name": "高级双床",
+          "price": 1499
+        }
+      ],
+      "openTime": "2016-03-05",
+      "status": "pending",
+      "rejectReason": null,
+      "nearby": "青岛、亲子、宠物友好、泳池",
+      "images": [],
+      "createdAt": "2024-05-24T10:00:00.000Z",
+      "updatedAt": "2024-05-24T10:00:00.000Z"
+    },
+    {
+      "id": "h144",
+      "merchantId": "u1",
+      "nameZh": "易宿·青岛快捷酒店 12号",
+      "nameEn": "Yisu 青岛 Budget Hotel #12",
+      "address": "山东省青岛市中心区示例路 112 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h144_1",
+          "name": "标准大床",
+          "price": 1659
+        },
+        {
+          "id": "r_h144_2",
+          "name": "高级双床",
+          "price": 1739
+        }
+      ],
+      "openTime": "2017-04-06",
+      "status": "rejected",
+      "rejectReason": "模拟：审核资料不全/图片不清晰",
+      "nearby": "青岛、近地铁、免费停车、含早、豪华、无烟、健身房",
+      "images": [],
+      "createdAt": "2024-05-25T10:00:00.000Z",
+      "updatedAt": "2024-05-25T10:00:00.000Z"
+    },
+    {
+      "id": "h145",
+      "merchantId": "u1",
+      "nameZh": "易宿·重庆精选酒店 01号",
+      "nameEn": "Yisu 重庆 Select Hotel #01",
+      "address": "重庆市中心区示例路 101 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h145_1",
+          "name": "标准大床",
+          "price": 419
+        },
+        {
+          "id": "r_h145_2",
+          "name": "高级双床",
+          "price": 559
+        }
+      ],
+      "openTime": "2016-02-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "重庆、网红、海景",
+      "images": [],
+      "createdAt": "2024-05-26T10:00:00.000Z",
+      "updatedAt": "2024-05-26T10:00:00.000Z"
+    },
+    {
+      "id": "h146",
+      "merchantId": "u1",
+      "nameZh": "易宿·重庆商务酒店 02号",
+      "nameEn": "Yisu 重庆 Business Hotel #02",
+      "address": "重庆市中心区示例路 102 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h146_1",
+          "name": "标准大床",
+          "price": 579
+        },
+        {
+          "id": "r_h146_2",
+          "name": "高级双床",
+          "price": 779
+        }
+      ],
+      "openTime": "2017-03-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "重庆、商务、免费停车、泳池",
+      "images": [],
+      "createdAt": "2024-05-27T10:00:00.000Z",
+      "updatedAt": "2024-05-27T10:00:00.000Z"
+    },
+    {
+      "id": "h147",
+      "merchantId": "u1",
+      "nameZh": "易宿·重庆度假酒店 03号",
+      "nameEn": "Yisu 重庆 Resort Hotel #03",
+      "address": "重庆市中心区示例路 103 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h147_1",
+          "name": "标准大床",
+          "price": 719
+        },
+        {
+          "id": "r_h147_2",
+          "name": "高级双床",
+          "price": 979
+        }
+      ],
+      "openTime": "2018-04-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "重庆、度假、含早、健身房",
+      "images": [],
+      "createdAt": "2024-05-28T10:00:00.000Z",
+      "updatedAt": "2024-05-28T10:00:00.000Z"
+    },
+    {
+      "id": "h148",
+      "merchantId": "u1",
+      "nameZh": "易宿·重庆设计师酒店 04号",
+      "nameEn": "Yisu 重庆 Designer Hotel #04",
+      "address": "重庆市中心区示例路 104 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h148_1",
+          "name": "标准大床",
+          "price": 1019
+        },
+        {
+          "id": "r_h148_2",
+          "name": "高级双床",
+          "price": 1099
+        }
+      ],
+      "openTime": "2019-05-05",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "重庆、设计师、免费停车、近地铁、宠物友好",
+      "images": [],
+      "createdAt": "2024-05-29T10:00:00.000Z",
+      "updatedAt": "2024-05-29T10:00:00.000Z"
+    },
+    {
+      "id": "h149",
+      "merchantId": "u1",
+      "nameZh": "易宿·重庆亲子酒店 05号",
+      "nameEn": "Yisu 重庆 Family Hotel #05",
+      "address": "重庆市中心区示例路 105 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h149_1",
+          "name": "标准大床",
+          "price": 1839
+        },
+        {
+          "id": "r_h149_2",
+          "name": "高级双床",
+          "price": 1979
+        }
+      ],
+      "openTime": "2020-06-06",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "重庆、亲子、无烟",
+      "images": [],
+      "createdAt": "2024-05-30T10:00:00.000Z",
+      "updatedAt": "2024-05-30T10:00:00.000Z"
+    },
+    {
+      "id": "h150",
+      "merchantId": "u1",
+      "nameZh": "易宿·重庆快捷酒店 06号",
+      "nameEn": "Yisu 重庆 Budget Hotel #06",
+      "address": "重庆市中心区示例路 106 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h150_1",
+          "name": "标准大床",
+          "price": 99
+        },
+        {
+          "id": "r_h150_2",
+          "name": "高级双床",
+          "price": 299
+        }
+      ],
+      "openTime": "2021-07-07",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "重庆、近地铁、免费停车、含早、豪华",
+      "images": [],
+      "createdAt": "2024-05-31T10:00:00.000Z",
+      "updatedAt": "2024-05-31T10:00:00.000Z"
+    },
+    {
+      "id": "h151",
+      "merchantId": "u1",
+      "nameZh": "易宿·重庆精选酒店 07号",
+      "nameEn": "Yisu 重庆 Select Hotel #07",
+      "address": "重庆市中心区示例路 107 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h151_1",
+          "name": "标准大床",
+          "price": 349
+        },
+        {
+          "id": "r_h151_2",
+          "name": "高级双床",
+          "price": 609
+        }
+      ],
+      "openTime": "2022-08-01",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "重庆、网红、温泉、免费停车",
+      "images": [],
+      "createdAt": "2024-06-01T10:00:00.000Z",
+      "updatedAt": "2024-06-01T10:00:00.000Z"
+    },
+    {
+      "id": "h152",
+      "merchantId": "u1",
+      "nameZh": "易宿·重庆商务酒店 08号",
+      "nameEn": "Yisu 重庆 Business Hotel #08",
+      "address": "重庆市中心区示例路 108 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h152_1",
+          "name": "标准大床",
+          "price": 469
+        },
+        {
+          "id": "r_h152_2",
+          "name": "高级双床",
+          "price": 549
+        }
+      ],
+      "openTime": "2023-09-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "重庆、商务、免费停车、近地铁、海景、含早",
+      "images": [],
+      "createdAt": "2024-06-02T10:00:00.000Z",
+      "updatedAt": "2024-06-02T10:00:00.000Z"
+    },
+    {
+      "id": "h153",
+      "merchantId": "u1",
+      "nameZh": "易宿·重庆度假酒店 09号",
+      "nameEn": "Yisu 重庆 Resort Hotel #09",
+      "address": "重庆市中心区示例路 109 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h153_1",
+          "name": "标准大床",
+          "price": 619
+        },
+        {
+          "id": "r_h153_2",
+          "name": "高级双床",
+          "price": 759
+        }
+      ],
+      "openTime": "2024-01-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "重庆、度假、含早、泳池、温泉",
+      "images": [],
+      "createdAt": "2024-06-03T10:00:00.000Z",
+      "updatedAt": "2024-06-03T10:00:00.000Z"
+    },
+    {
+      "id": "h154",
+      "merchantId": "u1",
+      "nameZh": "易宿·重庆设计师酒店 10号",
+      "nameEn": "Yisu 重庆 Designer Hotel #10",
+      "address": "重庆市中心区示例路 110 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h154_1",
+          "name": "标准大床",
+          "price": 819
+        },
+        {
+          "id": "r_h154_2",
+          "name": "高级双床",
+          "price": 1019
+        }
+      ],
+      "openTime": "2015-02-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "重庆、设计师、免费停车、亲子、健身房、海景",
+      "images": [],
+      "createdAt": "2024-06-04T10:00:00.000Z",
+      "updatedAt": "2024-06-04T10:00:00.000Z"
+    },
+    {
+      "id": "h155",
+      "merchantId": "u1",
+      "nameZh": "易宿·重庆亲子酒店 11号",
+      "nameEn": "Yisu 重庆 Family Hotel #11",
+      "address": "重庆市中心区示例路 111 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h155_1",
+          "name": "标准大床",
+          "price": 1239
+        },
+        {
+          "id": "r_h155_2",
+          "name": "高级双床",
+          "price": 1499
+        }
+      ],
+      "openTime": "2016-03-05",
+      "status": "pending",
+      "rejectReason": null,
+      "nearby": "重庆、亲子、宠物友好、泳池",
+      "images": [],
+      "createdAt": "2024-06-05T10:00:00.000Z",
+      "updatedAt": "2024-06-05T10:00:00.000Z"
+    },
+    {
+      "id": "h156",
+      "merchantId": "u1",
+      "nameZh": "易宿·重庆快捷酒店 12号",
+      "nameEn": "Yisu 重庆 Budget Hotel #12",
+      "address": "重庆市中心区示例路 112 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h156_1",
+          "name": "标准大床",
+          "price": 1659
+        },
+        {
+          "id": "r_h156_2",
+          "name": "高级双床",
+          "price": 1739
+        }
+      ],
+      "openTime": "2017-04-06",
+      "status": "rejected",
+      "rejectReason": "模拟：审核资料不全/图片不清晰",
+      "nearby": "重庆、近地铁、免费停车、含早、豪华、无烟、健身房",
+      "images": [],
+      "createdAt": "2024-06-06T10:00:00.000Z",
+      "updatedAt": "2024-06-06T10:00:00.000Z"
+    },
+    {
+      "id": "h157",
+      "merchantId": "u1",
+      "nameZh": "易宿·武汉精选酒店 01号",
+      "nameEn": "Yisu 武汉 Select Hotel #01",
+      "address": "湖北省武汉市中心区示例路 101 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h157_1",
+          "name": "标准大床",
+          "price": 419
+        },
+        {
+          "id": "r_h157_2",
+          "name": "高级双床",
+          "price": 559
+        }
+      ],
+      "openTime": "2016-02-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "武汉、网红、免费停车",
+      "images": [],
+      "createdAt": "2024-06-07T10:00:00.000Z",
+      "updatedAt": "2024-06-07T10:00:00.000Z"
+    },
+    {
+      "id": "h158",
+      "merchantId": "u1",
+      "nameZh": "易宿·武汉商务酒店 02号",
+      "nameEn": "Yisu 武汉 Business Hotel #02",
+      "address": "湖北省武汉市中心区示例路 102 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h158_1",
+          "name": "标准大床",
+          "price": 579
+        },
+        {
+          "id": "r_h158_2",
+          "name": "高级双床",
+          "price": 779
+        }
+      ],
+      "openTime": "2017-03-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "武汉、商务、免费停车、含早",
+      "images": [],
+      "createdAt": "2024-06-08T10:00:00.000Z",
+      "updatedAt": "2024-06-08T10:00:00.000Z"
+    },
+    {
+      "id": "h159",
+      "merchantId": "u1",
+      "nameZh": "易宿·武汉度假酒店 03号",
+      "nameEn": "Yisu 武汉 Resort Hotel #03",
+      "address": "湖北省武汉市中心区示例路 103 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h159_1",
+          "name": "标准大床",
+          "price": 719
+        },
+        {
+          "id": "r_h159_2",
+          "name": "高级双床",
+          "price": 979
+        }
+      ],
+      "openTime": "2018-04-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "武汉、度假、含早、温泉",
+      "images": [],
+      "createdAt": "2024-06-09T10:00:00.000Z",
+      "updatedAt": "2024-06-09T10:00:00.000Z"
+    },
+    {
+      "id": "h160",
+      "merchantId": "u1",
+      "nameZh": "易宿·武汉设计师酒店 04号",
+      "nameEn": "Yisu 武汉 Designer Hotel #04",
+      "address": "湖北省武汉市中心区示例路 104 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h160_1",
+          "name": "标准大床",
+          "price": 1019
+        },
+        {
+          "id": "r_h160_2",
+          "name": "高级双床",
+          "price": 1099
+        }
+      ],
+      "openTime": "2019-05-05",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "武汉、设计师、免费停车、近地铁、海景",
+      "images": [],
+      "createdAt": "2024-06-10T10:00:00.000Z",
+      "updatedAt": "2024-06-10T10:00:00.000Z"
+    },
+    {
+      "id": "h161",
+      "merchantId": "u1",
+      "nameZh": "易宿·武汉亲子酒店 05号",
+      "nameEn": "Yisu 武汉 Family Hotel #05",
+      "address": "湖北省武汉市中心区示例路 105 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h161_1",
+          "name": "标准大床",
+          "price": 1839
+        },
+        {
+          "id": "r_h161_2",
+          "name": "高级双床",
+          "price": 1979
+        }
+      ],
+      "openTime": "2020-06-06",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "武汉、亲子、泳池",
+      "images": [],
+      "createdAt": "2024-06-11T10:00:00.000Z",
+      "updatedAt": "2024-06-11T10:00:00.000Z"
+    },
+    {
+      "id": "h162",
+      "merchantId": "u1",
+      "nameZh": "易宿·武汉快捷酒店 06号",
+      "nameEn": "Yisu 武汉 Budget Hotel #06",
+      "address": "湖北省武汉市中心区示例路 106 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h162_1",
+          "name": "标准大床",
+          "price": 99
+        },
+        {
+          "id": "r_h162_2",
+          "name": "高级双床",
+          "price": 299
+        }
+      ],
+      "openTime": "2021-07-07",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "武汉、近地铁、免费停车、含早、豪华、健身房",
+      "images": [],
+      "createdAt": "2024-06-12T10:00:00.000Z",
+      "updatedAt": "2024-06-12T10:00:00.000Z"
+    },
+    {
+      "id": "h163",
+      "merchantId": "u1",
+      "nameZh": "易宿·武汉精选酒店 07号",
+      "nameEn": "Yisu 武汉 Select Hotel #07",
+      "address": "湖北省武汉市中心区示例路 107 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h163_1",
+          "name": "标准大床",
+          "price": 349
+        },
+        {
+          "id": "r_h163_2",
+          "name": "高级双床",
+          "price": 609
+        }
+      ],
+      "openTime": "2022-08-01",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "武汉、网红、温泉、宠物友好",
+      "images": [],
+      "createdAt": "2024-06-13T10:00:00.000Z",
+      "updatedAt": "2024-06-13T10:00:00.000Z"
+    },
+    {
+      "id": "h164",
+      "merchantId": "u1",
+      "nameZh": "易宿·武汉商务酒店 08号",
+      "nameEn": "Yisu 武汉 Business Hotel #08",
+      "address": "湖北省武汉市中心区示例路 108 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h164_1",
+          "name": "标准大床",
+          "price": 469
+        },
+        {
+          "id": "r_h164_2",
+          "name": "高级双床",
+          "price": 549
+        }
+      ],
+      "openTime": "2023-09-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "武汉、商务、免费停车、近地铁、海景、无烟",
+      "images": [],
+      "createdAt": "2024-06-14T10:00:00.000Z",
+      "updatedAt": "2024-06-14T10:00:00.000Z"
+    },
+    {
+      "id": "h165",
+      "merchantId": "u1",
+      "nameZh": "易宿·武汉度假酒店 09号",
+      "nameEn": "Yisu 武汉 Resort Hotel #09",
+      "address": "湖北省武汉市中心区示例路 109 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h165_1",
+          "name": "标准大床",
+          "price": 619
+        },
+        {
+          "id": "r_h165_2",
+          "name": "高级双床",
+          "price": 759
+        }
+      ],
+      "openTime": "2024-01-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "武汉、度假、含早、泳池、豪华",
+      "images": [],
+      "createdAt": "2024-06-15T10:00:00.000Z",
+      "updatedAt": "2024-06-15T10:00:00.000Z"
+    },
+    {
+      "id": "h166",
+      "merchantId": "u1",
+      "nameZh": "易宿·武汉设计师酒店 10号",
+      "nameEn": "Yisu 武汉 Designer Hotel #10",
+      "address": "湖北省武汉市中心区示例路 110 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h166_1",
+          "name": "标准大床",
+          "price": 819
+        },
+        {
+          "id": "r_h166_2",
+          "name": "高级双床",
+          "price": 1019
+        }
+      ],
+      "openTime": "2015-02-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "武汉、设计师、免费停车、亲子、健身房",
+      "images": [],
+      "createdAt": "2024-06-16T10:00:00.000Z",
+      "updatedAt": "2024-06-16T10:00:00.000Z"
+    },
+    {
+      "id": "h167",
+      "merchantId": "u1",
+      "nameZh": "易宿·武汉亲子酒店 11号",
+      "nameEn": "Yisu 武汉 Family Hotel #11",
+      "address": "湖北省武汉市中心区示例路 111 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h167_1",
+          "name": "标准大床",
+          "price": 1239
+        },
+        {
+          "id": "r_h167_2",
+          "name": "高级双床",
+          "price": 1499
+        }
+      ],
+      "openTime": "2016-03-05",
+      "status": "pending",
+      "rejectReason": null,
+      "nearby": "武汉、亲子、宠物友好、含早",
+      "images": [],
+      "createdAt": "2024-06-17T10:00:00.000Z",
+      "updatedAt": "2024-06-17T10:00:00.000Z"
+    },
+    {
+      "id": "h168",
+      "merchantId": "u1",
+      "nameZh": "易宿·武汉快捷酒店 12号",
+      "nameEn": "Yisu 武汉 Budget Hotel #12",
+      "address": "湖北省武汉市中心区示例路 112 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h168_1",
+          "name": "标准大床",
+          "price": 1659
+        },
+        {
+          "id": "r_h168_2",
+          "name": "高级双床",
+          "price": 1739
+        }
+      ],
+      "openTime": "2017-04-06",
+      "status": "rejected",
+      "rejectReason": "模拟：审核资料不全/图片不清晰",
+      "nearby": "武汉、近地铁、免费停车、含早、豪华、无烟、温泉",
+      "images": [],
+      "createdAt": "2024-06-18T10:00:00.000Z",
+      "updatedAt": "2024-06-18T10:00:00.000Z"
+    },
+    {
+      "id": "h169",
+      "merchantId": "u1",
+      "nameZh": "易宿·长沙精选酒店 01号",
+      "nameEn": "Yisu 长沙 Select Hotel #01",
+      "address": "湖南省长沙市中心区示例路 101 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h169_1",
+          "name": "标准大床",
+          "price": 419
+        },
+        {
+          "id": "r_h169_2",
+          "name": "高级双床",
+          "price": 559
+        }
+      ],
+      "openTime": "2016-02-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "长沙、网红、泳池",
+      "images": [],
+      "createdAt": "2024-06-19T10:00:00.000Z",
+      "updatedAt": "2024-06-19T10:00:00.000Z"
+    },
+    {
+      "id": "h170",
+      "merchantId": "u1",
+      "nameZh": "易宿·长沙商务酒店 02号",
+      "nameEn": "Yisu 长沙 Business Hotel #02",
+      "address": "湖南省长沙市中心区示例路 102 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h170_1",
+          "name": "标准大床",
+          "price": 579
+        },
+        {
+          "id": "r_h170_2",
+          "name": "高级双床",
+          "price": 779
+        }
+      ],
+      "openTime": "2017-03-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "长沙、商务、免费停车、健身房",
+      "images": [],
+      "createdAt": "2024-06-20T10:00:00.000Z",
+      "updatedAt": "2024-06-20T10:00:00.000Z"
+    },
+    {
+      "id": "h171",
+      "merchantId": "u1",
+      "nameZh": "易宿·长沙度假酒店 03号",
+      "nameEn": "Yisu 长沙 Resort Hotel #03",
+      "address": "湖南省长沙市中心区示例路 103 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h171_1",
+          "name": "标准大床",
+          "price": 719
+        },
+        {
+          "id": "r_h171_2",
+          "name": "高级双床",
+          "price": 979
+        }
+      ],
+      "openTime": "2018-04-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "长沙、度假、含早、宠物友好",
+      "images": [],
+      "createdAt": "2024-06-21T10:00:00.000Z",
+      "updatedAt": "2024-06-21T10:00:00.000Z"
+    },
+    {
+      "id": "h172",
+      "merchantId": "u1",
+      "nameZh": "易宿·长沙设计师酒店 04号",
+      "nameEn": "Yisu 长沙 Designer Hotel #04",
+      "address": "湖南省长沙市中心区示例路 104 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h172_1",
+          "name": "标准大床",
+          "price": 1019
+        },
+        {
+          "id": "r_h172_2",
+          "name": "高级双床",
+          "price": 1099
+        }
+      ],
+      "openTime": "2019-05-05",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "长沙、设计师、免费停车、近地铁、无烟",
+      "images": [],
+      "createdAt": "2024-06-22T10:00:00.000Z",
+      "updatedAt": "2024-06-22T10:00:00.000Z"
+    },
+    {
+      "id": "h173",
+      "merchantId": "u1",
+      "nameZh": "易宿·长沙亲子酒店 05号",
+      "nameEn": "Yisu 长沙 Family Hotel #05",
+      "address": "湖南省长沙市中心区示例路 105 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h173_1",
+          "name": "标准大床",
+          "price": 1839
+        },
+        {
+          "id": "r_h173_2",
+          "name": "高级双床",
+          "price": 1979
+        }
+      ],
+      "openTime": "2020-06-06",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "长沙、亲子、豪华",
+      "images": [],
+      "createdAt": "2024-06-23T10:00:00.000Z",
+      "updatedAt": "2024-06-23T10:00:00.000Z"
+    },
+    {
+      "id": "h174",
+      "merchantId": "u1",
+      "nameZh": "易宿·长沙快捷酒店 06号",
+      "nameEn": "Yisu 长沙 Budget Hotel #06",
+      "address": "湖南省长沙市中心区示例路 106 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h174_1",
+          "name": "标准大床",
+          "price": 99
+        },
+        {
+          "id": "r_h174_2",
+          "name": "高级双床",
+          "price": 299
+        }
+      ],
+      "openTime": "2021-07-07",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "长沙、近地铁、免费停车、含早、豪华",
+      "images": [],
+      "createdAt": "2024-06-24T10:00:00.000Z",
+      "updatedAt": "2024-06-24T10:00:00.000Z"
+    },
+    {
+      "id": "h175",
+      "merchantId": "u1",
+      "nameZh": "易宿·长沙精选酒店 07号",
+      "nameEn": "Yisu 长沙 Select Hotel #07",
+      "address": "湖南省长沙市中心区示例路 107 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h175_1",
+          "name": "标准大床",
+          "price": 349
+        },
+        {
+          "id": "r_h175_2",
+          "name": "高级双床",
+          "price": 609
+        }
+      ],
+      "openTime": "2022-08-01",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "长沙、网红、温泉、含早",
+      "images": [],
+      "createdAt": "2024-06-25T10:00:00.000Z",
+      "updatedAt": "2024-06-25T10:00:00.000Z"
+    },
+    {
+      "id": "h176",
+      "merchantId": "u1",
+      "nameZh": "易宿·长沙商务酒店 08号",
+      "nameEn": "Yisu 长沙 Business Hotel #08",
+      "address": "湖南省长沙市中心区示例路 108 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h176_1",
+          "name": "标准大床",
+          "price": 469
+        },
+        {
+          "id": "r_h176_2",
+          "name": "高级双床",
+          "price": 549
+        }
+      ],
+      "openTime": "2023-09-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "长沙、商务、免费停车、近地铁、海景、温泉",
+      "images": [],
+      "createdAt": "2024-06-26T10:00:00.000Z",
+      "updatedAt": "2024-06-26T10:00:00.000Z"
+    },
+    {
+      "id": "h177",
+      "merchantId": "u1",
+      "nameZh": "易宿·长沙度假酒店 09号",
+      "nameEn": "Yisu 长沙 Resort Hotel #09",
+      "address": "湖南省长沙市中心区示例路 109 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h177_1",
+          "name": "标准大床",
+          "price": 619
+        },
+        {
+          "id": "r_h177_2",
+          "name": "高级双床",
+          "price": 759
+        }
+      ],
+      "openTime": "2024-01-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "长沙、度假、含早、泳池、海景",
+      "images": [],
+      "createdAt": "2024-06-27T10:00:00.000Z",
+      "updatedAt": "2024-06-27T10:00:00.000Z"
+    },
+    {
+      "id": "h178",
+      "merchantId": "u1",
+      "nameZh": "易宿·长沙设计师酒店 10号",
+      "nameEn": "Yisu 长沙 Designer Hotel #10",
+      "address": "湖南省长沙市中心区示例路 110 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h178_1",
+          "name": "标准大床",
+          "price": 819
+        },
+        {
+          "id": "r_h178_2",
+          "name": "高级双床",
+          "price": 1019
+        }
+      ],
+      "openTime": "2015-02-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "长沙、设计师、免费停车、亲子、健身房、泳池",
+      "images": [],
+      "createdAt": "2024-06-28T10:00:00.000Z",
+      "updatedAt": "2024-06-28T10:00:00.000Z"
+    },
+    {
+      "id": "h179",
+      "merchantId": "u1",
+      "nameZh": "易宿·长沙亲子酒店 11号",
+      "nameEn": "Yisu 长沙 Family Hotel #11",
+      "address": "湖南省长沙市中心区示例路 111 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h179_1",
+          "name": "标准大床",
+          "price": 1239
+        },
+        {
+          "id": "r_h179_2",
+          "name": "高级双床",
+          "price": 1499
+        }
+      ],
+      "openTime": "2016-03-05",
+      "status": "pending",
+      "rejectReason": null,
+      "nearby": "长沙、亲子、宠物友好、健身房",
+      "images": [],
+      "createdAt": "2024-06-29T10:00:00.000Z",
+      "updatedAt": "2024-06-29T10:00:00.000Z"
+    },
+    {
+      "id": "h180",
+      "merchantId": "u1",
+      "nameZh": "易宿·长沙快捷酒店 12号",
+      "nameEn": "Yisu 长沙 Budget Hotel #12",
+      "address": "湖南省长沙市中心区示例路 112 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h180_1",
+          "name": "标准大床",
+          "price": 1659
+        },
+        {
+          "id": "r_h180_2",
+          "name": "高级双床",
+          "price": 1739
+        }
+      ],
+      "openTime": "2017-04-06",
+      "status": "rejected",
+      "rejectReason": "模拟：审核资料不全/图片不清晰",
+      "nearby": "长沙、近地铁、免费停车、含早、豪华、无烟、宠物友好",
+      "images": [],
+      "createdAt": "2024-06-30T10:00:00.000Z",
+      "updatedAt": "2024-06-30T10:00:00.000Z"
+    },
+    {
+      "id": "h181",
+      "merchantId": "u1",
+      "nameZh": "易宿·天津精选酒店 01号",
+      "nameEn": "Yisu 天津 Select Hotel #01",
+      "address": "天津市中心区示例路 101 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h181_1",
+          "name": "标准大床",
+          "price": 419
+        },
+        {
+          "id": "r_h181_2",
+          "name": "高级双床",
+          "price": 559
+        }
+      ],
+      "openTime": "2016-02-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "天津、网红、温泉",
+      "images": [],
+      "createdAt": "2024-07-01T10:00:00.000Z",
+      "updatedAt": "2024-07-01T10:00:00.000Z"
+    },
+    {
+      "id": "h182",
+      "merchantId": "u1",
+      "nameZh": "易宿·天津商务酒店 02号",
+      "nameEn": "Yisu 天津 Business Hotel #02",
+      "address": "天津市中心区示例路 102 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h182_1",
+          "name": "标准大床",
+          "price": 579
+        },
+        {
+          "id": "r_h182_2",
+          "name": "高级双床",
+          "price": 779
+        }
+      ],
+      "openTime": "2017-03-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "天津、商务、免费停车、海景",
+      "images": [],
+      "createdAt": "2024-07-02T10:00:00.000Z",
+      "updatedAt": "2024-07-02T10:00:00.000Z"
+    },
+    {
+      "id": "h183",
+      "merchantId": "u1",
+      "nameZh": "易宿·天津度假酒店 03号",
+      "nameEn": "Yisu 天津 Resort Hotel #03",
+      "address": "天津市中心区示例路 103 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h183_1",
+          "name": "标准大床",
+          "price": 719
+        },
+        {
+          "id": "r_h183_2",
+          "name": "高级双床",
+          "price": 979
+        }
+      ],
+      "openTime": "2018-04-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "天津、度假、含早、泳池",
+      "images": [],
+      "createdAt": "2024-07-03T10:00:00.000Z",
+      "updatedAt": "2024-07-03T10:00:00.000Z"
+    },
+    {
+      "id": "h184",
+      "merchantId": "u1",
+      "nameZh": "易宿·天津设计师酒店 04号",
+      "nameEn": "Yisu 天津 Designer Hotel #04",
+      "address": "天津市中心区示例路 104 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h184_1",
+          "name": "标准大床",
+          "price": 1019
+        },
+        {
+          "id": "r_h184_2",
+          "name": "高级双床",
+          "price": 1099
+        }
+      ],
+      "openTime": "2019-05-05",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "天津、设计师、免费停车、近地铁、健身房",
+      "images": [],
+      "createdAt": "2024-07-04T10:00:00.000Z",
+      "updatedAt": "2024-07-04T10:00:00.000Z"
+    },
+    {
+      "id": "h185",
+      "merchantId": "u1",
+      "nameZh": "易宿·天津亲子酒店 05号",
+      "nameEn": "Yisu 天津 Family Hotel #05",
+      "address": "天津市中心区示例路 105 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h185_1",
+          "name": "标准大床",
+          "price": 1839
+        },
+        {
+          "id": "r_h185_2",
+          "name": "高级双床",
+          "price": 1979
+        }
+      ],
+      "openTime": "2020-06-06",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "天津、亲子、宠物友好",
+      "images": [],
+      "createdAt": "2024-07-05T10:00:00.000Z",
+      "updatedAt": "2024-07-05T10:00:00.000Z"
+    },
+    {
+      "id": "h186",
+      "merchantId": "u1",
+      "nameZh": "易宿·天津快捷酒店 06号",
+      "nameEn": "Yisu 天津 Budget Hotel #06",
+      "address": "天津市中心区示例路 106 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h186_1",
+          "name": "标准大床",
+          "price": 99
+        },
+        {
+          "id": "r_h186_2",
+          "name": "高级双床",
+          "price": 299
+        }
+      ],
+      "openTime": "2021-07-07",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "天津、近地铁、免费停车、含早、豪华、无烟",
+      "images": [],
+      "createdAt": "2024-07-06T10:00:00.000Z",
+      "updatedAt": "2024-07-06T10:00:00.000Z"
+    },
+    {
+      "id": "h187",
+      "merchantId": "u1",
+      "nameZh": "易宿·天津精选酒店 07号",
+      "nameEn": "Yisu 天津 Select Hotel #07",
+      "address": "天津市中心区示例路 107 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h187_1",
+          "name": "标准大床",
+          "price": 349
+        },
+        {
+          "id": "r_h187_2",
+          "name": "高级双床",
+          "price": 609
+        }
+      ],
+      "openTime": "2022-08-01",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "天津、网红、温泉、豪华",
+      "images": [],
+      "createdAt": "2024-07-07T10:00:00.000Z",
+      "updatedAt": "2024-07-07T10:00:00.000Z"
+    },
+    {
+      "id": "h188",
+      "merchantId": "u1",
+      "nameZh": "易宿·天津商务酒店 08号",
+      "nameEn": "Yisu 天津 Business Hotel #08",
+      "address": "天津市中心区示例路 108 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h188_1",
+          "name": "标准大床",
+          "price": 469
+        },
+        {
+          "id": "r_h188_2",
+          "name": "高级双床",
+          "price": 549
+        }
+      ],
+      "openTime": "2023-09-02",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "天津、商务、免费停车、近地铁、海景",
+      "images": [],
+      "createdAt": "2024-07-08T10:00:00.000Z",
+      "updatedAt": "2024-07-08T10:00:00.000Z"
+    },
+    {
+      "id": "h189",
+      "merchantId": "u1",
+      "nameZh": "易宿·天津度假酒店 09号",
+      "nameEn": "Yisu 天津 Resort Hotel #09",
+      "address": "天津市中心区示例路 109 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h189_1",
+          "name": "标准大床",
+          "price": 619
+        },
+        {
+          "id": "r_h189_2",
+          "name": "高级双床",
+          "price": 759
+        }
+      ],
+      "openTime": "2024-01-03",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "天津、度假、含早、泳池",
+      "images": [],
+      "createdAt": "2024-07-09T10:00:00.000Z",
+      "updatedAt": "2024-07-09T10:00:00.000Z"
+    },
+    {
+      "id": "h190",
+      "merchantId": "u1",
+      "nameZh": "易宿·天津设计师酒店 10号",
+      "nameEn": "Yisu 天津 Designer Hotel #10",
+      "address": "天津市中心区示例路 110 号",
+      "starLevel": 4,
+      "roomTypes": [
+        {
+          "id": "r_h190_1",
+          "name": "标准大床",
+          "price": 819
+        },
+        {
+          "id": "r_h190_2",
+          "name": "高级双床",
+          "price": 1019
+        }
+      ],
+      "openTime": "2015-02-04",
+      "status": "approved",
+      "rejectReason": null,
+      "nearby": "天津、设计师、免费停车、亲子、健身房、温泉",
+      "images": [],
+      "createdAt": "2024-07-10T10:00:00.000Z",
+      "updatedAt": "2024-07-10T10:00:00.000Z"
+    },
+    {
+      "id": "h191",
+      "merchantId": "u1",
+      "nameZh": "易宿·天津亲子酒店 11号",
+      "nameEn": "Yisu 天津 Family Hotel #11",
+      "address": "天津市中心区示例路 111 号",
+      "starLevel": 5,
+      "roomTypes": [
+        {
+          "id": "r_h191_1",
+          "name": "标准大床",
+          "price": 1239
+        },
+        {
+          "id": "r_h191_2",
+          "name": "高级双床",
+          "price": 1499
+        }
+      ],
+      "openTime": "2016-03-05",
+      "status": "pending",
+      "rejectReason": null,
+      "nearby": "天津、亲子、宠物友好、海景",
+      "images": [],
+      "createdAt": "2024-07-11T10:00:00.000Z",
+      "updatedAt": "2024-07-11T10:00:00.000Z"
+    },
+    {
+      "id": "h192",
+      "merchantId": "u1",
+      "nameZh": "易宿·天津快捷酒店 12号",
+      "nameEn": "Yisu 天津 Budget Hotel #12",
+      "address": "天津市中心区示例路 112 号",
+      "starLevel": 1,
+      "roomTypes": [
+        {
+          "id": "r_h192_1",
+          "name": "标准大床",
+          "price": 1659
+        },
+        {
+          "id": "r_h192_2",
+          "name": "高级双床",
+          "price": 1739
+        }
+      ],
+      "openTime": "2017-04-06",
+      "status": "rejected",
+      "rejectReason": "模拟：审核资料不全/图片不清晰",
+      "nearby": "天津、近地铁、免费停车、含早、豪华、无烟、泳池",
+      "images": [],
+      "createdAt": "2024-07-12T10:00:00.000Z",
+      "updatedAt": "2024-07-12T10:00:00.000Z"
+    }
+  ]
+}

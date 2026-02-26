@@ -11,6 +11,62 @@ import { requireAuth, requireMerchant } from '../middleware/auth.js'
 
 const router = Router()
 
+const HOLIDAY_MMDD = new Set(['01-01', '05-01', '10-01'])
+
+function parseDateStr(value) {
+  if (!value || typeof value !== 'string') return null
+  const m = value.match(/^(\d{4})-(\d{2})-(\d{2})$/)
+  if (!m) return null
+  const y = Number(m[1])
+  const mo = Number(m[2]) - 1
+  const d = Number(m[3])
+  const dt = new Date(y, mo, d)
+  if (Number.isNaN(dt.getTime())) return null
+  return dt
+}
+
+function getStayDates(checkIn, checkOut) {
+  const start = parseDateStr(checkIn)
+  const end = parseDateStr(checkOut)
+  if (!start || !end || end <= start) return []
+  const days = []
+  const cursor = new Date(start)
+  while (cursor < end) {
+    days.push(new Date(cursor))
+    cursor.setDate(cursor.getDate() + 1)
+  }
+  return days
+}
+
+function getDynamicMultiplier(checkIn, checkOut) {
+  const days = getStayDates(checkIn, checkOut)
+  if (days.length === 0) return 1
+  const total = days.reduce((sum, day) => {
+    let rate = 1
+    const dayOfWeek = day.getDay()
+    if (dayOfWeek === 5 || dayOfWeek === 6) rate += 0.2 // 周五、周六
+    const mmdd = `${String(day.getMonth() + 1).padStart(2, '0')}-${String(day.getDate()).padStart(2, '0')}`
+    if (HOLIDAY_MMDD.has(mmdd)) rate += 0.3 // 固定节日
+    return sum + rate
+  }, 0)
+  return Number((total / days.length).toFixed(2))
+}
+
+function applyDynamicPricing(hotel, multiplier) {
+  const rate = Number.isFinite(multiplier) && multiplier > 0 ? multiplier : 1
+  const roomTypes = (hotel.roomTypes || []).map((room) => ({
+    ...room,
+    price: Math.round((Number(room.price) || 0) * rate),
+  }))
+  return {
+    ...hotel,
+    roomTypes,
+    pricing: {
+      multiplier: rate,
+    },
+  }
+}
+
 /**
  * GET /api/hotels
  * 用户端列表：仅返回已发布(approved)的酒店，支持 keyword、starLevel、page、pageSize
@@ -24,6 +80,8 @@ router.get('/', (req, res) => {
     tags,
     minPrice,
     maxPrice,
+    checkIn,
+    checkOut,
     page = 1,
     pageSize = 10,
     manage,
@@ -79,6 +137,10 @@ router.get('/', (req, res) => {
     }
   }
 
+  // 动态价格：根据入住日期按夜晚计算均值倍率（周末/节假日）
+  const dynamicMultiplier = getDynamicMultiplier(checkIn, checkOut)
+  list = list.map((h) => applyDynamicPricing(h, dynamicMultiplier))
+
   if (minPrice !== undefined || maxPrice !== undefined) {
     const min = minPrice !== undefined && minPrice !== '' ? Number(minPrice) : undefined
     const max = maxPrice !== undefined && maxPrice !== '' ? Number(maxPrice) : undefined
@@ -97,7 +159,17 @@ router.get('/', (req, res) => {
   const start = (pageNum - 1) * size
   const data = list.slice(start, start + size)
 
-  return success(res, { list: data, total, page: pageNum, pageSize: size })
+  return success(res, {
+    list: data,
+    total,
+    page: pageNum,
+    pageSize: size,
+    pricing: {
+      checkIn: checkIn || null,
+      checkOut: checkOut || null,
+      multiplier: dynamicMultiplier,
+    },
+  })
 })
 
 /**
@@ -106,6 +178,7 @@ router.get('/', (req, res) => {
  */
 router.get('/:id', (req, res) => {
   const { id } = req.params
+  const { checkIn, checkOut } = req.query
   const auth = req.headers.authorization
   const token = auth && auth.startsWith('Bearer ') ? auth.slice(7) : null
   const session = token ? tokenStore.get(token) : null
@@ -119,9 +192,19 @@ router.get('/:id', (req, res) => {
     return fail(res, '酒店不存在或未发布', 404, 404)
   }
 
-  // 房型按价格从低到高
-  const roomTypes = [...(hotel.roomTypes || [])].sort((a, b) => (a.price || 0) - (b.price || 0))
-  return success(res, { ...hotel, roomTypes })
+  // 房型按价格从低到高（可按日期动态计价）
+  const dynamicMultiplier = getDynamicMultiplier(checkIn, checkOut)
+  const pricedHotel = applyDynamicPricing(hotel, dynamicMultiplier)
+  const roomTypes = [...(pricedHotel.roomTypes || [])].sort((a, b) => (a.price || 0) - (b.price || 0))
+  return success(res, {
+    ...pricedHotel,
+    roomTypes,
+    pricing: {
+      checkIn: checkIn || null,
+      checkOut: checkOut || null,
+      multiplier: dynamicMultiplier,
+    },
+  })
 })
 
 /**

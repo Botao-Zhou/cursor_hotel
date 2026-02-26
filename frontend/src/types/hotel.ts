@@ -21,6 +21,11 @@ export interface Hotel {
   rejectReason?: string | null
   nearby?: string
   images?: string[]
+  pricing?: {
+    checkIn?: string | null
+    checkOut?: string | null
+    multiplier?: number
+  }
   createdAt: string
   updatedAt: string
 }

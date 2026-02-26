@@ -9,7 +9,7 @@ import {
   Calendar,
   Toast,
 } from 'react-vant'
-import { fetchHotelDetail, type Hotel } from '@/api/hotels'
+import { fetchHotelDetailWithDate, type Hotel } from '@/api/hotels'
 import { formatDate, dateFromStr, nights } from '@/utils/date'
 import { createPlaceholderImage } from '@/utils/placeholderImage'
 import '@/styles/h5-detail.css'
@@ -41,9 +41,11 @@ export default function Detail() {
 
   useEffect(() => {
     if (!id) return
+    const checkIn = dateRange?.[0] ? formatDate(dateRange[0]) : undefined
+    const checkOut = dateRange?.[1] ? formatDate(dateRange[1]) : undefined
     setLoading(true)
     setError(null)
-    fetchHotelDetail(id)
+    fetchHotelDetailWithDate(id, checkIn, checkOut)
       .then((res) => {
         if (res.code !== 0 || !res.data) {
           setError(res.message || '酒店不存在或已下线')
@@ -57,7 +59,7 @@ export default function Detail() {
       .finally(() => {
         setLoading(false)
       })
-  }, [id])
+  }, [id, dateRange])
 
   const images = useMemo(() => {
     if (hotel?.images && hotel.images.length > 0) return hotel.images
@@ -164,6 +166,11 @@ export default function Detail() {
           >
             <div className="h5-detail-date-title">入住/离店</div>
             <div className="h5-detail-date-text">{dateText}</div>
+            {hotel.pricing?.multiplier && hotel.pricing.multiplier > 1 ? (
+              <div className="h5-detail-date-text" style={{ color: '#ee0a24', marginTop: 4 }}>
+                动态价格系数 x{hotel.pricing.multiplier.toFixed(2)}（周末/节假日）
+              </div>
+            ) : null}
           </section>
 
           {/* 房型与价格列表：根据价格从低到高排序 */}

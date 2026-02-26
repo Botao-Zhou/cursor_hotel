@@ -22,6 +22,9 @@ export default function HotelCard({ hotel }: { hotel: Hotel }) {
   const price = getMinPrice(hotel)
   const score = mockScore(hotel.id)
   const tags = hotel.nearby ? hotel.nearby.split(/[,，、]/).slice(0, 3) : []
+  const dynamicMultiplier = hotel.pricing?.multiplier ?? 1
+  const hasDynamicPricing = dynamicMultiplier > 1
+  const basePrice = hasDynamicPricing ? Math.max(0, Math.round(price / dynamicMultiplier)) : price
 
   return (
     <div
@@ -61,6 +64,11 @@ export default function HotelCard({ hotel }: { hotel: Hotel }) {
           <span className="h5-hotel-card-price-num">¥{price}</span>
           <span className="h5-hotel-card-price-unit">起</span>
         </div>
+        {hasDynamicPricing ? (
+          <div style={{ marginTop: 4, color: '#ee0a24', fontSize: 12 }}>
+            动态价 x{dynamicMultiplier.toFixed(2)}（基准¥{basePrice}）
+          </div>
+        ) : null}
       </div>
     </div>
   )
